@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+ <head>
+     <meta charset="UTF-8">
+      <title>4SVagos</title>
+    
+        <style>
+            .header-superior {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                padding: 20px;
+            }
+
+            .menu-pestañas {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                gap: 20px;
+            }
+
+            .menu-pestañas li a {
+                text-decoration: none;
+                font-weight: bold;
+            }
+            
+            .seccion-regristro {
+                width: 300px;
+            }
+        </style>
+
+<body>
+    <div class="header-superior">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="Ciudad.html">Formulario</a></li>
+                    <li><a href="lugares.html">Lugares</a></li>
+                    <li><a href="Contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <div class="seccion-regristro">
+
+                <form action="/enviar" method="post">
+                    <h2>Iniciar Sesión</h2>
+                    <p>
+                    <label for="Nombre" style="display: inline-block; width: 60px;">Nombre: </label>
+                    <input type="text" id="Nombre" name="Nombre" required>
+                    </p>
+
+                    <p>
+                    <label for="Apellido" style="display: inline-block; width: 60px;">Apellido: </label>
+                    <input type="text" id="Apellido" name="Apellido" required>
+                    </p>   
+                    
+                    <p>
+                    <label for="Email" style="display: inline-block; width: 60px;">Email: </label>
+                    <input type="email" id="Email" name="Email" required>
+                    </p>
+
+                    <p>
+                    <label for="Celular" style="display: inline-block; width: 60px;">Celular: </label>
+                    <input type="text" id="Celular" name="Celular" required>
+                    </p>
+                 <button type="submit">Enviar</button>
+                </form>
+                </div>
+             </div>
+        <hr>
+     </head>
+
+        <body>
+        <h1>BIENVENIDOS A CIUDAD GOTICA</h1>
+            <img src="https://th.bing.com/th/id/OIP.uLsVT4t8HADkY-6xCnRtOwHaEL?r=0&o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3"
+            alt="Paisaje random" width="400" height="200" style="margin-right: 445px;">
+            <img src="https://imgs.search.brave.com/Bu1FKRxMl8cdiBZj8HdG3Ui6GSQSwjKaGZL1DAjg8Wk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnJl/ZGQuaXQvaWZrMGxm/dHFobWVmMS5qcGVn"
+            alt="Foto de la ciudad de noche" width="400" height="200">
+        <h2>Sobre Ciudad Gótica</h2>
+        <p>
+            Ciudad Gótica es una gran ciudad ubicada en la costa este de los Estados Unidos, en el estado federado de Nueva Jersey, al otro lado de la bahía de su ciudad hermana, Metrópolis, Nueva York. Es conocida por ser el lugar de nacimiento y residencia del justiciero nocturno, Batman.
+            Siempre con un pozo negro literal lleno de criminales, corrupción, contaminación e infestaciones de alimañas, Gótica es considerada por algunos como la ciudad más peligrosa y criminalmente corrupta del mundo. De día, un lugar turístico atractivo y seductor, mientras que de noche, la peor pesadilla de toda persona decente.
+        </p>
+
+        <h2>Lugares de la ciudad para visitar</h2>
+        <table style="border-collapse: collapse; width: 100%; border: 1px solid black; width: 50%; ">
+            <thead>
+                <tr style="background-color: #f2f2f2;">
+                    <th>Lugar</th>
+                    <th>Descripción</th>
+                </tr>
+                <tbody>
+                    <tr>
+                        <td style="border: 1px solid black; padding: 8px;">Playa Cafune</td>
+                        <td style="border: 1px solid black; padding: 8px;">Playa Cafune es una playa de arena negra con vista al atardecer muy hermosa</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid black; padding: 8px;">Vólcan Malacara</td>
+                        <td style="border: 1px solid black; padding: 8px;">Vólcan Malacara es un volcán activo con paisajes impresionantes</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid black; padding: 8px;">Viñedo Tacoronte</td>
+                        <td style="border: 1px solid black; padding: 8px;">Viñedo Tacoronte es un área dedicada a la producción de vinos de alta calidad</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid black; padding: 8px;">Vieja Gótica</td>
+                        <td style="border: 1px solid black; padding: 8px;">Vieja Gótica es el barrio más antiguo de la ciudad, lleno de historia y arquitectura colonial</td>
+                    </tr>
+
+                </tbody>
+                <tfoot>
+        </table>
+        <p>Para más información sobre los lugares turísticos de la ciudad, visita nuestra página de <a href="Lugares.html">Lugares</a>.</p>
+        
+        <br>    
+        
+        <img src="https://imgs.search.brave.com/WveQWu0wJBJ5_7ZNPAYnM_F_5lJG8bhfrJCgZbIdq3w/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9mcmVl/d2Fsa2luZ3RvdXJz/cGVydS5jb20vd3At/Y29udGVudC91cGxv/YWRzLzIwMjQvMDIv/dG9wLTIwLWx1Z2Fy/ZXMtdHVyaXN0aWNv/cy1kZWwtcGVydV8x/NS53ZWJw"
+            alt="Montañas random" width="400" height="200">
+
+        <img src="https://imgs.search.brave.com/PFIGHsPikl2KBi4dhICq7KCHxGX7khLe4pl4S71xFDA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvdGh1bWJu/YWlsL21pbmVjcmFm/dC1hZXN0aGV0aWMt/Z3Jhc3MtYW5kLXBv/b2wtN3cydm9ia2Rm/Y2locjVlcS5qcGc"
+            alt="Yo estuve ahi" width="400" height="200">
+
+
+    
+                    <p>Para mas informacion, visite el apartado de <a href="Contacto.html">Contacto</a>.</p>
+        </body>
+
+     <p><strong> TP Grupal</strong>:
+        Desarrolado por:
+        Alex Santino Gaitán Gutiérrez
+        Alvarez Mario
+        Agustin Antonio Abregú
+        Lisandro Gimenez Frez
+     </p>
+
+</html>
