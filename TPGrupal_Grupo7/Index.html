@@ -12,6 +12,8 @@
     </style>
 
     <style>
+        /* Acomodar las pestañas de navegación en la parte superior izquierda */
+
         .header-superior {
             display: flex;
             justify-content: space-between;
@@ -30,42 +32,55 @@
         .menu-pestañas li a {
             text-decoration: none;
             font-weight: bold;
+            width: 100%;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .menu-pestañas li a:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgb(255, 230, 0);
+
         }
 
         .seccion-regristro {
-            width: 300px;
+            width: 100px;
         }
     </style>
 
 <body>
+    <!--En la cabecera superior agrego las pestañas para poder desplazarse en las demas secciones de la pagina-->
+
     <div class="header-superior">
         <nav>
             <ul class="menu-pestañas">
-                <li><a href="index.html" style="background-color: yellow;">Inicio</a></li>
-                <li><a href="Ciudad.html" style="background-color: yellow;">Ciudad</a></li>
-                <li><a href="lugares.html" style="background-color: yellow;">Lugares</a></li>
-                <li><a href="Contacto.html" style="background-color: yellow;">Contacto</a></li>
+                <li><a href="index.html" style="color: rgb(122, 121, 121);">Inicio</a></li>
+                <li><a href="Ciudad.html" style="color: rgb(122, 121, 121);">Ciudad</a></li>
+                <li><a href="lugares.html" style="color: rgb(122, 121, 121);">Lugares</a></li>
+                <li><a href="Contacto.html" style="color: rgb(122, 121, 121);">Contacto</a></li>
             </ul>
         </nav>
-
+        <!-- Agrego un boton de registro para que los usuarios puedan registrarse en la pagina y acceder a mas contenido -->
         <div class="seccion-regristro">
-            <button type="button" onclick="location.href='IniciarSesion.html'"
-                    style="background-color: #f0ec07; 
-                    color: black; 
-                    padding: 10px 20px; 
+            <button type="button" onclick="location.href='Registrarse.html'" style="background-color: #ffee00; 
+                    color: black;   
+                    padding: 8px 15px; 
                     text-decoration: none; 
                     border-radius: 5px;
                     font-weight: bold;">
 
                 Registrarse
             </button>
-
         </div>
+
     </div>
-
     <hr>
-
     </head>
+
+
+    <!-- Seccion de bienvenida a la pagina con una imagen de la ciudad de noche y un breve resumen de la ciudad y su historia -->
 
     <body>
         <h1 style="font-size: 50px;
@@ -77,14 +92,20 @@
 
         </h1>
 
-        <iframe width="500" height="300" src="https://i.giphy.com/Sx2jWspiy33gYxNNuo.webp" frameborder="0"
+        <!-- Imagen de la ciudad de noche al entrar a la pagina-->
+        <iframe width="8000" height="450"
+            src="https://boutique-batman.com/cdn/shop/articles/Gotham_city_dd741ad3-8629-458c-af6d-e1ab25bd38cc.jpg?v=1755593391&width=1100"
+            frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
+            allowfullscreen; width="9000px" height="300px"></iframe>
         </iframe>
+
         <p>
-            <a href="#lugares-resumen">Hecha un visazo a los mejores lugares de Ciudad Gotica</a>
+            <a href="#lugares-resumen" style="text-decoration: underline; color: rgb(253, 152, 0)">►► Hecha un visazo a
+                los mejores lugares de Ciudad Gotica ◄◄</a>
         </p>
 
+        <!-- Un breve resumen de como es la ciudad y lo que les espera-->
         <h2 style="background-color: #e7eb00; color:black; font-size: 18px; display: inline; border-radius: 5px">Sobre
             Ciudad Gótica</h2>
         <p>
@@ -96,6 +117,8 @@
             De día, un lugar turístico atractivo y seductor, mientras que de noche, la peor pesadilla de toda persona
             decente.
         </p>
+
+        <!--Un poco de la historia del lugar para informar a la gente que ingresa a la pagina-->
 
         <h2 style="background-color: #e7eb00; color:black; font-size: 18px; display: inline; border-radius: 5px;">
             Historia</h2>
@@ -114,10 +137,15 @@
         </p>
 
         <h2 id="lugares-resumen"
-            style="background-color: #e7eb00; color:black; font-size: 18px; display: inline; border-radius: 5px;">Conoce
-            un poco sobre los lugares de Ciudad Gótica</h2>
+            style="background-color: #e7eb00;
+            color:black;
+            font-size: 18px;
+            display: inline;
+            border-radius: 5px;
+            text-align: center;">
+            Conoce un poco sobre los lugares de Ciudad Gótica</h2>
 
-        <table style="border-collapse: collapse; width: 100%; border: 1px solid rgb(3, 3, 3); width: 50%; ">
+        <!--<table style="border-collapse: collapse; width: 100%; border: 1px solid rgb(3, 3, 3); width: 50%; ">
             <thead>
                 <tr style="background-color: #e7eb00; color:black" ;>
                     <th>Lugar</th>
@@ -151,26 +179,78 @@
 
             </tbody>
             <tfoot>
-        </table>
+        </table>-->
+
+        <!-- Separo las imágenes de ls lugares a visitar y estas se pueden seleccionar para ser direccionados al apartado con mas informacion del lugar seleccionado -->
+        <style>
+            /* Estilos para la seccion de lugares con animaciones y mas prolijo estilo galeria */
+
+            /* Contenedor general de las imagenes */
+            .lugares-galeria {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 30px;
+                justify-content: center;
+                max-width: 2000px;
+                margin: 30px auto;
+            }
+
+            /* Tamaño de las imagenes dentro de la galeria */
+            .lugares-galeria a {
+                width: 45%;
+            }
+
+            /*Estilo y efecto de la imagen dentro de la galeris*/
+            .lugares-galeria img {
+                width: 100%;
+                height: 300px;
+                object-fit: cover;
+                border-radius: 10px;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            /* Efecto al pasar el mouse sobre la imagen */
+            .lugares-galeria img:hover {
+                transform: scale(1.05);
+                box-shadow: 0 4px 15px rgb(255, 208, 0);
+            }
+        </style>
+
+        <div class="lugares-galeria">
+            <a>
+                <img src="imagenes/PlayaCafune.jpg" alt="Playa Cafune" width="00" height="300"
+                    style="border-radius: 50px; margin-right: 10px;">
+            </a>
+
+            <a>
+                <img src="imagenes/Gotham_city_dd741ad3-8629-458c-af6d-e1ab25bd38cc.png"
+                    alt="Foto de la ciudad de noche" width="300" height="300"
+                    style="border-radius: 50px; margin-right: 10px;">
+            </a>
+
+            <a>
+                <img src="imagenes/VinedoTacoronte.jpg" alt="Viñedo Tacoronte" width="300" height="300"
+                    style="border-radius: 50px; margin-right: 10px;">
+            </a>
+
+            <a>
+                <img src="imagenes/VolcanMalacara.jpg" alt="Foto del volcan de la zona" width="300" height="300"
+                    style="border-radius: 50px; margin-right: 10px;">
+            </a>
+
+        </div>
 
         <p>Para más información sobre los lugares turísticos de la ciudad, visita nuestra página de <a
-                href="Lugares.html">Lugares</a>.</p>
+                href="Lugares.html" style="text-decoration: underline; color: yellow">Lugares</a>.</p>
 
-        <br>
-
-        <img src="https://th.bing.com/th/id/OIP.uLsVT4t8HADkY-6xCnRtOwHaEL?r=0&o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3"
-            alt="Paisaje random" width="500" height="300" style="margin-right: 100px;">
-
-        <img src="https://imgs.search.brave.com/Bu1FKRxMl8cdiBZj8HdG3Ui6GSQSwjKaGZL1DAjg8Wk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnJl/ZGQuaXQvaWZrMGxm/dHFobWVmMS5qcGVn"
-            alt="Foto de la ciudad de noche" width="500" height="300" style="background-color: yellow;">
-
-
-
-        <p>Si quiere contactar con nosotros, visite el apartado de <a href="Contacto.html">Contacto</a>.</p>
+        <!--Redireccin hacia la seccion de contacto en caso de tener alguna duda-->
+        <p>Si quiere contactar con nosotros, visite el apartado de <a href="Contacto.html"
+                style="text-decoration: underline; color: yellow">Contacto</a>.</p>
 
     </body>
 
-    <p><strong> TP Grupal</strong>:
+    <!--Integrantes del grupo del trabajo practico-->
+    <p style="color:rgb(87, 88, 88)"><strong> TP Grupal</strong>:
         Desarrolado por:
         - Alex Santino Gaitán Gutiérrez
         - Alvarez Mario

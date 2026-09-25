@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Registrarse</title>
+
+    <style type="text/css">
+        body {
+            color: rgb(247, 247, 250);
+            background-color: rgb(14, 18, 19);
+        }
+    </style>
+
+    <style>
+        .header-superior {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 20px;
+        }
+
+        .menu-pestañas {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        .menu-pestañas li a {
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .seccion-regristro {
+            width: 100px;
+        }
+    </style>
+
+
+    
+    <div class="header-superior">
+        <nav>
+            <ul class="menu-pestañas">
+                <li><a href="index.html" style="color: rgb(122, 121, 121);">Inicio</a></li>
+                <li><a href="Ciudad.html" style="color: rgb(122, 121, 121);">Ciudad</a></li>
+                <li><a href="lugares.html" style="color: rgb(122, 121, 121);">Lugares</a></li>
+                <li><a href="Contacto.html" style="color: rgb(122, 121, 121);">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+
+</head>
+<form action="/enviar" method="post">
+    <h2>Registrarse</h2>
+    <p>
+        <label for="Nombre" style="display: inline-block; width: 60px;">Nombre: </label>
+        <input type="text" id="Nombre" name="Nombre" required>
+    </p>
+
+    <p>
+        <label for="Apellido" style="display: inline-block; width: 60px;">Apellido: </label>
+        <input type="text" id="Apellido" name="Apellido" required>
+    </p>
+
+    <p>
+        <label for="Email" style="display: inline-block; width: 60px;">Email: </label>
+        <input type="email" id="Email" name="Email" required>
+    </p>
+
+    <p>
+        <label for="Celular" style="display: inline-block; width: 60px;">Celular: </label>
+        <input type="text" id="Celular" name="Celular" required>
+    </p>
+    <button type="submit">Enviar</button>
+</form>
+
+</html>
