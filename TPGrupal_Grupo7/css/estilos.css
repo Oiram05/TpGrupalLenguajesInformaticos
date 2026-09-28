@@ -1,44 +1,87 @@
-    
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
 /*Color principal de la pagina*/
-        body {
-            color: rgb(247, 247, 250);
-            background-color: rgb(14, 18, 19);
-        }
+body {
+    font-family: Arial, sans-serif;
+    color: rgb(247, 247, 250);
+    background-color: rgb(14, 18, 19);
+}
+
 
 /*INDEX*/
 /* Acomodar las pestañas de navegación en la parte superior izquierda del index*/
 
-        .header-superior {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            padding: 20px;
-        }
+.header-superior {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
 
-        .menu-pestañas {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            gap: 20px;
-        }
+.menu-pestañas {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
 
-        .menu-pestañas li a {
-            text-decoration: none;
-            font-weight: bold;
-            width: 100%;
-            height: 50px;
-            object-fit: cover;
-            border-radius: 20px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+.menu-pestañas li a {
+    text-decoration: none;
+    font-weight: bold;
+    width: 100%;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-        .menu-pestañas li a:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 15px rgb(255, 230, 0);
+.menu-pestañas li a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgb(255, 230, 0);
 
-        }
+}
 
-        .seccion-regristro {
-            width: 100px;
-        }
+.seccion-regristro {
+    width: 100px;
+
+    /*Separo las imágenes de los lugares a visitar y estas se pueden seleccionar para ser direccionados al 
+    apartado con mas informacion del lugar seleccionado */
+    /* Estilos para la seccion de lugares con animaciones y mas prolijo estilo galeria */
+    /* Contenedor general de las imagenes */
+    .lugares-galeria {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+        max-width: 2000px;
+        margin: 30px auto;
+    }
+
+    /* Tamaño de las imagenes dentro de la galeria */
+    .lugares-galeria a {
+        width: 45%;
+    }
+
+    /*Estilo y efecto de la imagen dentro de la galeris*/
+    .lugares-galeria img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 10px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Efecto al pasar el mouse sobre la imagen */
+    .lugares-galeria img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 15px rgb(255, 208, 0);
+    }
+
+
+    
