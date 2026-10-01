@@ -1,152 +1,144 @@
 <!DOCTYPE html>
 <html lang="es">
 
-    <head>
-        <meta charset="UTF-8">
+<head>
+    <meta charset="UTF-8">
 
-        <!--Conexion con CSS-->
-        <link rel=stylesheet href=css/estilos.css>
+    <!--Conexion con CSS-->
+    <link rel=stylesheet href=css/estilos.css>
 
-        <title>4SVagos</title>
+    <title>4SVagos</title>
 
 
-    <body>
-        <!--En la cabecera superior agrego las pestañas para poder desplazarse en las demas secciones de la pagina-->
+<body>
+    <!--En la cabecera superior agrego las pestañas para poder desplazarse en las demas secciones de la pagina-->
 
-        <div class="header-superior">
-            <nav>
-                <ul class="menu-pestañas">
-                    <li><a href="index.html" style="color: rgb(122, 121, 121);">Inicio</a></li>
-                    <li><a href="Ciudad.html" style="color: rgb(122, 121, 121);">Ciudad</a></li>
-                    <li><a href="lugares.html" style="color: rgb(122, 121, 121);">Lugares</a></li>
-                    <li><a href="Contacto.html" style="color: rgb(122, 121, 121);">Contacto</a></li>
-                </ul>
-            </nav>
-            <!-- Agrego un boton de registro para que los usuarios puedan registrarse en la pagina y acceder a mas contenido -->
-            <div class="seccion-regristro">
-                <button type="button" onclick="location.href='Registrarse.html'" style="background-color: #ffee00; 
-                        color: black;   
+    <div class="header-superior">
+        <nav>
+            <ul class="menu-pestañas">
+                
+                <li><a href="index.html" style="color: rgb(122, 121, 121);">Inicio</a></li>
+                <li><a href="Ciudad.html" style="color: rgb(122, 121, 121);">Ciudad</a></li>
+                <li><a href="lugares.html" style="color: rgb(122, 121, 121);">Lugares</a></li>
+                <li><a href="Contacto.html" style="color: rgb(122, 121, 121);">Contacto</a></li>
+            </ul>
+        </nav>
+
+
+        <!-- Agrego un boton de registro para que los usuarios puedan registrarse en la pagina y acceder a mas contenido -->
+        <div class="seccion-regristro">
+            <button type="button" onclick="location.href='Registrarse.html'" style="background-color: #5ecce7; 
+                        color: rgb(0, 0, 0);   
                         padding: 8px 15px; 
                         text-decoration: none; 
                         border-radius: 5px;
                         font-weight: bold;">
-
-                    Registrarse
-                </button>
-            </div>
-
+                Registrarse
+            </button>
         </div>
-        <hr>
+    </div>
     </head>
 
 
-        <!-- Seccion de bienvenida a la pagina con una imagen de la ciudad de noche y un breve resumen de la ciudad y su historia -->
+    <!-- Seccion de bienvenida a la pagina con una imagen de la ciudad de noche y un breve resumen de la ciudad y su historia -->
 
-        <body>
-            <h1 style="font-size: 50px;
+<div class="contenido-cabecera">
+    <h1 style="font-size: 50px;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
                 display: inline;
-                background-color: yellow;
                 border-radius: 10px;
-                color: black;">
-                BIENVENIDOS...
+                color: rgb(253, 253, 253);">
+        BIENVENIDOS 
+</h1>
+</div>
 
-            </h1>
+    <div class="video-inicial">
+        <video autoplay muted loop>
+            <source src="imagenes/CiudadDeFondo.mp4" type="video/mp4">
+        </video>
+    </div>
+    <br>
+    
+    <!--Resumen de la ciudad-->
+    <div class="contenedor-dos-columnas">
 
-            <!-- Imagen de la ciudad de noche al entrar a la pagina-->
-            <iframe width="1100" height="450"
-                src="https://boutique-batman.com/cdn/shop/articles/Gotham_city_dd741ad3-8629-458c-af6d-e1ab25bd38cc.jpg?v=1755593391&width=1100"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen; width="9000px" height="300px"></iframe>
-            </iframe>
-
-            <p>
-                <a href="#lugares-resumen" style="text-decoration: underline; color: rgb(253, 152, 0)">►► Hecha un visazo a
-                    los mejores lugares de esta ciudad ◄◄</a>
-            </p>
-
-            <!-- Un breve resumen de como es la ciudad y lo que les espera-->
-            <h2 style="background-color: #e7eb00; color:black; font-size: 18px; display: inline; border-radius: 5px">Sobre
-                esta ciudad</h2>
+        <!-- Resumen de la ciudad Columna izquierda -->
+        <div class="columna-caja">
+            <div class="titulo-columna">Sobre esta ciudad</div>
             <p>
                 Esta ciudad es una gran ciudad ubicada en la costa este de los Estados Unidos, en el estado federado de
                 Nueva Jersey, al otro lado de la bahía de su ciudad hermana, Metrópolis, Nueva York. Es conocida por ser el
                 lugar de nacimiento y residencia del justiciero nocturno, Batman.
-                Siempre con un pozo negro literal lleno de criminales, corrupción, contaminación e infestaciones de
-                alimañas, Gótica es considerada por algunos como la ciudad más peligrosa y criminalmente corrupta del mundo.
-                De día, un lugar turístico atractivo y seductor, mientras que de noche, la peor pesadilla de toda persona
-                decente.
             </p>
+        </div>
 
-            <!--Un poco de la historia del lugar para informar a la gente que ingresa a la pagina-->
-
-            <h2 style="background-color: #e7eb00; color:black; font-size: 18px; display: inline; border-radius: 5px;">
-                Historia</h2>
-            <p>
-                Fundada siglos atrás en 1635 por un mercenario noruego, Ciudad Gótica creció hasta convertirse en uno de los
-                principales centros económicos del mundo y un centro para la historia, la tecnología y las artes.
-                En 1981, los filántropos eminentes Thomas y Martha Wayne perdieron sus vidas durante un asalto. El crimen
-                dejó a su único hijo Bruce, quien fue testigo de su asesinato, el último miembro sobreviviente de la familia
-                Wayne.
-                A mediados de la década de 1990, un justiciero conocido como Batman libró una guerra de un solo hombre
-                contra el crimen. Armado con un prototipo de traje blindado de alta tecnología, numerosos aparatos y un
-                vehículo de combate personalizado, el vigilante fue a derribar tanto a las familias delincuentes Falcone y
-                Maroni, así como otros criminales extremadamente formidables, que van desde los extravagantes psicópatas
-                Joker y Harley Quinn, al mercenario Floyd Lawton, y al canibalista metahumano Killer Croc. Con el tiempo
-                Batman se hizo un aliado del Departamento de Policía de Ciudad Gótica, y de Robin.
-            </p>
-
-            <h2 id="lugares-resumen"
-                style="background-color: #e7eb00;
-                color:black;
-                font-size: 18px;
-                display: inline;
-                border-radius: 5px;
-                text-align: center;">
-                Conoce un poco sobre los lugares de esta ciudad</h2>
-
-
-
-            <div class="lugares-galeria">
-                <a>
-                    <img src="imagenes/PlayaCafune.jpg" alt="Playa Cafune" width="00" height="300"
-                        style="border-radius: 50px; margin-right: 10px;">
-                </a>    
-
-                <a>
-                    <img src="imagenes/Gotham_city_dd741ad3-8629-458c-af6d-e1ab25bd38cc.png"
-                        alt="Foto de la ciudad de noche" width="300" height="300"
-                        style="border-radius: 50px; margin-right: 10px;">
-                </a>
-
-                <a>
-                    <img src="imagenes/VinedoTacoronte.jpg" alt="Viñedo Tacoronte" width="300" height="300"
-                        style="border-radius: 50px; margin-right: 10px;">
-                </a>
-
-                <a>
-                    <img src="imagenes/VolcanMalacara.jpg" alt="Foto del volcan de la zona" width="300" height="300"
-                        style="border-radius: 50px; margin-right: 10px;">
-                </a>
-
+    <!--Un poco de la historia del lugar para informar a la gente que ingresa a la pagina-->
+        <div class="columna-caja">
+                <div class="titulo-columna">Lugares para vistar</div>
+                <ol>
+                    <li>Playa Cafune</li>
+                    <li>Vólcan Malacara</li>
+                    <li>Viñedo Tacoronte</li>
+                    <li>Ruta 7</li>
+                </ol>
+                <br> 
             </div>
+        </div>
 
-            <p>Para más información sobre los lugares turísticos de la ciudad, visita nuestra página de <a
-                    href="Lugares.html" style="text-decoration: underline; color: yellow">Lugares</a>.</p>
 
-            <!--Redireccin hacia la seccion de contacto en caso de tener alguna duda-->
-            <p>Si quiere contactar con nosotros, visite el apartado de <a href="Contacto.html"
-                    style="text-decoration: underline; color: yellow">Contacto</a>.</p>
 
-        </body>
 
-        <!--Integrantes del grupo del trabajo practico-->
-        <p style="color:rgb(87, 88, 88)"><strong> TP Grupal</strong>:
-            Desarrolado por:
-            - Alex Santino Gaitán Gutiérrez
-            - Alvarez Mario
-            - Agustin Antonio Abregú
-            - Lisandro Gimenez Frez
-        </p>    
+    <br>
+    <h2 id="lugares-resumen" style="background-color: #4b4b4b;
+                color:rgb(255, 255, 255);
+                font-size: 20px;
+                display: inline;
+                border-radius: 2px;
+                text-align: center;">
+        Un pequeño vistazo a los lugares</h2>
+
+    <div class="lugares-galeria">
+        <a>
+            <img src="imagenes/PlayaCafune.jpg" alt="Playa Cafune" width="00" height="300"
+                style="border-radius: 50px; margin-right: 10px;">
+        </a>
+
+        <a>
+            <img src="imagenes/Gotham_city_dd741ad3-8629-458c-af6d-e1ab25bd38cc.png" alt="Foto de la ciudad de noche"
+                width="300" height="300" style="border-radius: 50px; margin-right: 10px;">
+        </a>
+
+        <a>
+            <img src="imagenes/VinedoTacoronte.jpg" alt="Viñedo Tacoronte" width="300" height="300"
+                style="border-radius: 50px; margin-right: 10px;">
+        </a>
+
+        <a>
+            <img src="imagenes/VolcanMalacara.jpg" alt="Foto del volcan de la zona" width="300" height="300"
+                style="border-radius: 50px; margin-right: 10px;">
+        </a>
+
+    </div>
+
+
+
+    <p style="color: #000000;">Para más información sobre los lugares turísticos de la ciudad, visita nuestra página de <a href="Lugares.html"
+            style="text-decoration: underline; color: yellow">Lugares</a>.</p>
+
+    <!--Redireccin hacia la seccion de contacto en caso de tener alguna duda-->
+    <p style="color: #000000;">Si quiere contactar con nosotros, visite el apartado de <a href="Contacto.html"
+            style="text-decoration: underline; color: yellow">Contacto</a>.</p>
+
+</body>
+
+<!--Integrantes del grupo del trabajo practico-->
+<p style="color:rgb(87, 88, 88)"><strong> TP Grupal</strong>:
+    Desarrolado por:
+    - Alex Santino Gaitán Gutiérrez
+    - Alvarez Mario
+    - Agustin Antonio Abregú
+    - Lisandro Gimenez Frez
+</p>
 
 </html>
