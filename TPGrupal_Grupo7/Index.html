@@ -10,31 +10,23 @@
     <title>4SVagos</title>
 
 
-<body>
+<body class="body">
     <!--En la cabecera superior agrego las pestañas para poder desplazarse en las demas secciones de la pagina-->
 
     <div class="header-superior">
         <nav>
             <ul class="menu-pestañas">
-                
-                <li><a href="index.html" style="color: rgb(122, 121, 121);">Inicio</a></li>
-                <li><a href="Ciudad.html" style="color: rgb(122, 121, 121);">Ciudad</a></li>
-                <li><a href="lugares.html" style="color: rgb(122, 121, 121);">Lugares</a></li>
-                <li><a href="Contacto.html" style="color: rgb(122, 121, 121);">Contacto</a></li>
+                <li><a href="index.html" style="color: rgb(255, 255, 255);">Inicio</a></li>
+                <li><a href="Ciudad.html" style="color: rgb(255, 255, 255);">Ciudad</a></li>
+                <li><a href="lugares.html" style="color: rgb(255, 255, 255);">Lugares</a></li>
+                <li><a href="Contacto.html" style="color: rgb(255, 255, 255);">Contacto</a></li>
             </ul>
         </nav>
 
 
         <!-- Agrego un boton de registro para que los usuarios puedan registrarse en la pagina y acceder a mas contenido -->
         <div class="seccion-regristro">
-            <button type="button" onclick="location.href='Registrarse.html'" style="background-color: #5ecce7; 
-                        color: rgb(0, 0, 0);   
-                        padding: 8px 15px; 
-                        text-decoration: none; 
-                        border-radius: 5px;
-                        font-weight: bold;">
-                Registrarse
-            </button>
+            <a href="registrarse.html"style="color: rgb(255, 255, 255);">REGRISTRARSE</a>
         </div>
     </div>
     </head>
@@ -42,16 +34,18 @@
 
     <!-- Seccion de bienvenida a la pagina con una imagen de la ciudad de noche y un breve resumen de la ciudad y su historia -->
 
-<div class="contenido-cabecera">
-    <h1 style="font-size: 50px;
-    font-family: 'Oswald', sans-serif;
-    text-align: center;
+    <div class="contenido-cabecera">
+        <h1 style="font-size: 200px;
+                font-family: 'Bebas_Neue', sans-serif;
+                text-align: center;
                 display: inline;
                 border-radius: 10px;
-                color: rgb(253, 253, 253);">
-        BIENVENIDOS 
-</h1>
-</div>
+                color: rgb(253, 253, 253);
+                text-shadow: 0px 4px 15px rgba(54, 54, 54, 0.8);
+                ">
+            BIENVENIDOS
+        </h1>
+    </div>
 
     <div class="video-inicial">
         <video autoplay muted loop>
@@ -59,34 +53,34 @@
         </video>
     </div>
     <br>
-    
+
     <!--Resumen de la ciudad-->
     <div class="contenedor-dos-columnas">
 
         <!-- Resumen de la ciudad Columna izquierda -->
         <div class="columna-caja">
             <div class="titulo-columna">Sobre esta ciudad</div>
-            <p>
-                Esta ciudad es una gran ciudad ubicada en la costa este de los Estados Unidos, en el estado federado de
-                Nueva Jersey, al otro lado de la bahía de su ciudad hermana, Metrópolis, Nueva York. Es conocida por ser el
-                lugar de nacimiento y residencia del justiciero nocturno, Batman.
+            <p style="text-align: center;">
+                Viví la energía única de la ciudad en cada rincón. Un lugar donde la modernidad, 
+                la cultura y el movimiento constante se fusionan para ofrecerte experiencias inolvidables.
+                 Ya sea que busques descubrir nuevos horizontes, disfrutar de su movida urbana o simplemente 
+                 dejarte llevar por su horizonte imponente, aquí cada día es una nueva aventura. ¡Conectá con
+                  el corazón urbano y animate a descubrir todo lo que tiene preparado para vos!
             </p>
         </div>
 
-    <!--Un poco de la historia del lugar para informar a la gente que ingresa a la pagina-->
+        <!--Un poco de la historia del lugar para informar a la gente que ingresa a la pagina-->
         <div class="columna-caja">
-                <div class="titulo-columna">Lugares para vistar</div>
-                <ol>
-                    <li>Playa Cafune</li>
-                    <li>Vólcan Malacara</li>
-                    <li>Viñedo Tacoronte</li>
-                    <li>Ruta 7</li>
-                </ol>
-                <br> 
-            </div>
+            <div class="titulo-columna">Lugares mas visitados</div>
+            <ol>
+                <li>Playa Cafune</li>
+                <li>Vólcan Malacara</li>
+                <li>Viñedo Tacoronte</li>
+                <li>Ruta 7</li>
+            </ol>
+            <br>
         </div>
-
-
+    </div>
 
 
     <br>
@@ -119,26 +113,28 @@
                 style="border-radius: 50px; margin-right: 10px;">
         </a>
 
-    </div>
+    </div>  
 
 
+    <hr style="border: 1px solid #727272; margin: 50px 0px;">
 
-    <p style="color: #000000;">Para más información sobre los lugares turísticos de la ciudad, visita nuestra página de <a href="Lugares.html"
-            style="text-decoration: underline; color: yellow">Lugares</a>.</p>
+    <p style="color: #000000;">Para más información sobre los lugares turísticos de la ciudad, visita nuestra página de
+        <a href="Lugares.html" style="text-decoration: underline; color: yellow">Lugares</a>.</p>
 
     <!--Redireccin hacia la seccion de contacto en caso de tener alguna duda-->
     <p style="color: #000000;">Si quiere contactar con nosotros, visite el apartado de <a href="Contacto.html"
             style="text-decoration: underline; color: yellow">Contacto</a>.</p>
 
-</body>
 
-<!--Integrantes del grupo del trabajo practico-->
-<p style="color:rgb(87, 88, 88)"><strong> TP Grupal</strong>:
-    Desarrolado por:
-    - Alex Santino Gaitán Gutiérrez
-    - Alvarez Mario
-    - Agustin Antonio Abregú
-    - Lisandro Gimenez Frez
-</p>
+    <!--Integrantes del grupo del trabajo practico-->
+    <p style="color:rgb(87, 88, 88)"><strong> TP Grupal</strong>:
+        Desarrolado por:
+        - Alex Santino Gaitán Gutiérrez
+        - Alvarez Mario
+        - Agustin Antonio Abregú
+        - Lisandro Gimenez Frez
+    </p>
+
+</body>
 
 </html>

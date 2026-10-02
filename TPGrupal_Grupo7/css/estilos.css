@@ -1,18 +1,18 @@
 @font-face {
-    font-family: 'Oswald';
-    src: url('fonts/Oswald-Regular.ttf') format('truetype');
-    font-weight: 400;
+    font-family: 'Bebas_Neue';
+    src: url('../Fonts/Oswald/static/Oswald-Bold.ttf') format('truetype');
+    font-weight: 1000;
 }
 
 @font-face {
-    font-family: 'Oswald';
-    src: url('fonts/Oswald-Bold.ttf') format('truetype');
-    font-weight: 700;
+    font-family: 'Oswald-Bold';
+    src: url('../Fonts/Bebas_Neue/BebasNeue-Regular.ttf') format('truetype');
+    font-weight: 1000;
 }
 
-/*Color principal de la pagina*/
+/*Color principal de la pagina y fuente*/
 body {
-    font-family: 'Oswald', sans-serif;
+    
     margin: 0;
     padding: 0;
     color: rgb(255, 255, 255);
@@ -20,10 +20,11 @@ body {
 }
 
 
-/*INDEX*/
+/*HEADER*/
 /* Acomodar las pestañas de navegación en la parte superior izquierda del index*/
 
 .header-superior {
+    font-family: 'Oswald-Bold', sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -32,10 +33,19 @@ body {
 
 .menu-pestañas {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    margin: -10px;
+    padding: 400px;
     display: flex;
-    gap: 20px;
+    gap: 30px;
+
+    /*Texto dentro de las pestañas*/
+    font-size: 21px;
+    background-color: #474747;
+    color: rgb(255, 255, 255);
+    padding: 8px 20px;
+    text-decoration: none;
+    border-radius: 100px;
+    font-weight: bold;
 }
 
 .menu-pestañas li a {
@@ -44,27 +54,46 @@ body {
     width: 100%;
     height: 100px;
     object-fit: cover;
-    border-radius: 5px;    
+    border-radius: 100px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .menu-pestañas li a:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0px 10px rgb(185, 185, 185);
+    transform: scale(0.95);
+    box-shadow: 0px 0px 8px rgb(255, 254, 254);
 
 }
 
+
+/*SECCION DE REGISTRO*/
 .seccion-regristro {
+    /*POSICIONAMIENTO Y TAMAÑO*/
     width: 100px;
+    list-style-type: none;
+    margin: -10px;
+    padding: 1000px;
+    display: flex;
+    gap: 30px;
+
+    /*FUENTE PERSONALIZADA*/
+    font-family: 'Oswald-Bold', sans-serif;
+    text-decoration: none;
+    font-size: 21px;
+    background-color: #474747;
+    color: rgb(255, 255, 255);
+    padding: 10px 10px;
+    border-radius: 100px;
+    font-weight: bold;
+    object-fit: cover;
 
     /*Separo las imágenes de los lugares a visitar y estas se pueden seleccionar para ser direccionados al 
     apartado con mas informacion del lugar seleccionado */
     /* Estilos para la seccion de lugares con animaciones y mas prolijo estilo galeria */
     /* Contenedor general de las imagenes */
-}    
+}
 
 /*VIDEO INICIAL MOSTRANDO LA CIUDAD*/
-.video-inicial {    
+.video-inicial {
     position: relative;
     top: 0px;
     left: 0;
@@ -75,88 +104,99 @@ body {
 
 .video-inicial video {
     position: relative;
+    /*Saca el texto del flujo normal para ubicarlo con coordenadas exactas.*/
     top: 50%;
+    /*Sitúan el punto de referencia del texto en el centro exacto de la pantalla.*/
     left: 50%;
+    /*Sitúan el punto de referencia del texto en el centro exacto de la pantalla.*/
     transform: translate(-50%, -50%);
+    /*Desplaza el texto un 50% de su propio tamaño hacia arriba e izquierda para centrarlo de forma milimétrica.*/
     width: 100%;
+    /*Hace que el bloque ocupe todo el ancho de la pantalla.*/
     height: 100%;
+    /*Hace que el bloque ocupe todo el alto de la pantalla.*/
     object-fit: cover;
+    /*para que la imagen cubra completamente su contenedor sin deformarse ni estirarse*/
     z-index: -1;
+    /*Coloca el texto en una capa superior para que flote bien al frente, visible por encima del video de fondo.*/
 }
 
 /*TEXTO ENCIMA DEL VIDEO*/
 .contenido-cabecera {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            color: white;
-            z-index: 3;        /* Lo pone bien al frente para que se pueda leer */
-            width: 100%;
-        }
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 3;
+    /* Lo pone bien al frente para que se pueda leer */
+    width: 100%;
+    /*Hace que el bloque ocupe todo el ancho de la pantalla.*/
+}
 
 
 /*CUADROS DE TEXTO JUNTOS*/
 /* Contenedor de dos columnas para los textos uno al lado del otro*/
 .contenedor-dos-columnas {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 500px;
+    gap: 20px;
     justify-content: space-between;
     gap: 30px;
     margin-bottom: 30px 0;
 }
 
 .columna-caja {
-flex: 1;
-background-color: #474747;
-padding: 20px;
-border-radius: 10px;
-color: rgb(255, 255, 255);
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    flex: 1;
+    background-color: #474747;
+    padding: 15px;
+    border-radius: 15px;
+    color: rgb(255, 255, 255);
 }
 
-.titulo-columna{
-    background-color: rgb(255, 255, 255);
-    color: #000000;
-    font-size: 20px;
-    padding: 8px 15px;
-    border-radius: 5px;
+.titulo-columna {
+    font-family: 'Oswald-Bold', sans-serif;
+    background-color: rgb(161, 160, 160);
+    color: #ffffff;
+    font-size: 30px;
+    padding: 8px 100px;
+    border-radius: 10px;
     text-align: center;
-    margin-bottom: 15px;
-    font-weight: bold;  
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
 
 /*IMAGENES ESTILO GALERIA*/
 /*Muestra de imagenes de lugares mas visitados de la ciudad*/
-    .lugares-galeria {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 30px;
-        justify-content: center;
-        max-width: 2000px;
-        margin: 30px auto;
-    }
+.lugares-galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    max-width: 2000px;
+    margin: 30px auto;
+}
 
-    /* Tamaño de las imagenes dentro de la galeria */
-    .lugares-galeria a {
-        width: 45%;
-    }
+/* Tamaño de las imagenes dentro de la galeria */
+.lugares-galeria a {
+    width: 45%;
+}
 
-    /*Estilo y efecto de la imagen dentro de la galeris*/
-    .lugares-galeria img {
-        width: 100%;
-        height: 300px;
-        object-fit: cover;
-        border-radius: 10px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+/*Estilo y efecto de la imagen dentro de la galeris*/
+.lugares-galeria img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-    /* Efecto al pasar el mouse sobre la imagen */
-    .lugares-galeria img:hover {
-        transform: scale(1.05); 
-        box-shadow: 0 4px 15px rgb(253, 253, 252);
-    }   
-
-
-    
-
+/* Efecto al pasar el mouse sobre la imagen */
+.lugares-galeria img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgb(253, 253, 252);
+}
