@@ -1,3 +1,4 @@
+/*AGREGAR FUENTES PARA USARSE*/
 @font-face {
     font-family: 'Bebas_Neue';
     src: url('../Fonts/Oswald/static/Oswald-Bold.ttf') format('truetype');
@@ -12,7 +13,6 @@
 
 /*Color principal de la pagina y fuente*/
 body {
-    
     margin: 0;
     padding: 0;
     color: rgb(255, 255, 255);
@@ -61,9 +61,7 @@ body {
 .menu-pestañas li a:hover {
     transform: scale(0.95);
     box-shadow: 0px 0px 8px rgb(255, 254, 254);
-
 }
-
 
 /*SECCION DE REGISTRO*/
 .seccion-regristro {
@@ -77,7 +75,7 @@ body {
 
     /*FUENTE PERSONALIZADA*/
     font-family: 'Oswald-Bold', sans-serif;
-    text-decoration: none;
+    text-decoration-line: none;
     font-size: 21px;
     background-color: #474747;
     color: rgb(255, 255, 255);
@@ -98,7 +96,7 @@ body {
     top: 0px;
     left: 0;
     width: 100vw;
-    height: 500px;
+    height: 800px;
     overflow: hidden;
 }
 
@@ -126,7 +124,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -20%);
     text-align: center;
     color: white;
     z-index: 3;
@@ -199,4 +197,14 @@ body {
 .lugares-galeria img:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 15px rgb(253, 253, 252);
+}
+
+
+.formulario-registro {
+    font-family: 'Oswald-Bold', sans-serif;
+    text-decoration-line: none;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    padding: 0px 30px;
+    text-align: center;
 }
