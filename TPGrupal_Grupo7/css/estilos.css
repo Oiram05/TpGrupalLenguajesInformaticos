@@ -208,3 +208,80 @@ body {
     padding: 0px 30px;
     text-align: center;
 }
+
+/* Seccion de contenidos */
+/* Jerarquía tipográfica de Headings */
+h1, h2, h3 {
+    color:#FFFFFF;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+}
+
+h1 {
+    font-size: 2.2rem;
+    color: #FFFFFF; 
+}
+
+h2 {
+    font-size: 1.6rem;
+    padding-bottom: 0.4rem;
+    margin-top: 1.2rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+    color: #FFFFFF;
+    margin-top: 0.8rem;
+}
+
+/* Párrafos y elementos de texto */
+p {
+    margin-bottom: 1rem;
+    color: #FFFFFF;
+}
+
+/* Estilos de Seccion (<section>) */
+section {
+    background-color: #5a5656;
+    padding: 1.8rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Estilos de Artículos (<article>) */
+article {
+    background-color: #524e4e; /* Fondo gris oscuro */
+    color: #FFFFFF;            
+    border: 1px solid #000000;
+    border-left: 4px solid #a8b1b3; 
+    padding: 1.25rem;
+    margin: 1.5rem 0;
+    border-radius: 6px;
+}
+
+/* Contenido lateral (<aside>) */
+aside {
+    background-color: #626568;
+    color: #FFFFFF;
+    padding: 1.25rem;
+    border-left: 5px solid #FFFFFF;
+    border-radius: 4px;
+    margin-top: 1.5rem;
+}
+
+/* Listas internas dentro del contenido */
+ul, dl {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+dt {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+dd {
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+}
