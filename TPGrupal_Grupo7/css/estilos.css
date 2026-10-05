@@ -23,7 +23,7 @@ body {
 /*HEADER*/
 /* Acomodar las pestañas de navegación en la parte superior izquierda del index*/
 
-.header-superior {
+    .header-superior {
     font-family: 'Oswald-Bold', sans-serif;
     display: flex;
     justify-content: space-between;
