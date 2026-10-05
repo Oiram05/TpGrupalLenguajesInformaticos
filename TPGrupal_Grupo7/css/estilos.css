@@ -1,3 +1,7 @@
+/* ================================= */
+/* ESTILOS PARA CIUDAD.HTML (De Mario)*/ 
+/* ================================= */
+
 /*AGREGAR FUENTES PARA USARSE*/
 @font-face {
     font-family: 'Bebas_Neue';
@@ -208,6 +212,10 @@ body {
     padding: 0px 30px;
     text-align: center;
 }
+
+/* ================================= */
+/* ESTILOS PARA CIUDAD.HTML (De Agus)*/ 
+/* ================================= */
 
 /* Seccion de contenidos */
 /* Jerarquía tipográfica de Headings */
