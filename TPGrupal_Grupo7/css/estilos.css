@@ -208,3 +208,351 @@ body {
     padding: 0px 30px;
     text-align: center;
 }
+
+/* Seccion de contenidos */
+/* Jerarquía tipográfica de Headings */
+h1, h2, h3 {
+    color:#FFFFFF;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+}
+
+h1 {
+    font-size: 2.2rem;
+    color: #FFFFFF; 
+}
+
+h2 {
+    font-size: 1.6rem;
+    padding-bottom: 0.4rem;
+    margin-top: 1.2rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+    color: #FFFFFF;
+    margin-top: 0.8rem;
+}
+
+/* Párrafos y elementos de texto */
+p {
+    margin-bottom: 1rem;
+    color: #FFFFFF;
+}
+
+/* Estilos de Seccion (<section>) */
+section {
+    background-color: #5a5656;
+    padding: 1.8rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Estilos de Artículos (<article>) */
+article {
+    background-color: #524e4e; /* Fondo gris oscuro */
+    color: #FFFFFF;            
+    border: 1px solid #000000;
+    border-left: 4px solid #a8b1b3; 
+    padding: 1.25rem;
+    margin: 1.5rem 0;
+    border-radius: 6px;
+}
+
+/* Contenido lateral (<aside>) */
+aside {
+    background-color: #626568;
+    color: #FFFFFF;
+    padding: 1.25rem;
+    border-left: 5px solid #FFFFFF;
+    border-radius: 4px;
+    margin-top: 1.5rem;
+}
+
+/* Listas internas dentro del contenido */
+ul, dl {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+dt {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+dd {
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+} 
+
+/* Estilos para la tabla */ 
+
+/* TABLA */
+.tabla-horarios {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-family: 'Oswald', sans-serif;
+    background-color: #524e4e;
+    
+    /* Borde superior grueso para darle presencia e inicio claro */
+    border-top: 4px solid #ffffff; 
+}
+
+/* Encabezado en tono plano más oscuro (#383838) para que resalte */
+.tabla-horarios th {
+    background-color: #383838;
+    color: #ffffff;
+    font-family: 'Oswald-Bold', sans-serif;
+    font-size: 19px;
+    padding: 14px 15px;
+    text-align: left;
+    text-transform: uppercase;
+    border-bottom: 2px solid #777777;
+    border-right: 1px solid #777777;
+}
+
+/* Celdas del cuerpo */
+.tabla-horarios td {
+    padding: 12px 15px;
+    color: #ffffff;
+    font-size: 16px;
+    border-bottom: 1px solid #777777;
+    border-right: 1px solid #777777;
+}
+
+/* Filas intercaladas */
+.tabla-horarios tbody tr:nth-child(even) {
+    background-color: #5a5656;
+}
+
+/* Quitar líneas del borde derecho final */
+.tabla-horarios th:last-child,
+.tabla-horarios td:last-child {
+    border-right: none;
+}
+
+
+/* Estilos para el formulario de contacto */
+.formulario-contacto {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-family: 'Oswald', sans-serif;
+    background-color: #5a5656;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.formulario-contacto label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.formulario-contacto input, 
+.formulario-contacto textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #777777;
+    background-color: #474747;
+    color: white;
+    font-size: 16px;
+    box-sizing: border-box; /* Evita que el padding rompa el ancho del 100% */
+}
+
+.formulario-contacto input:focus, 
+.formulario-contacto textarea:focus {
+    outline: none;
+    border-color: #ffffff;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.btn-enviar {
+    background-color: rgb(161, 160, 160);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-family: 'Oswald-Bold', sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn-enviar:hover {
+    background-color: #ffffff;
+    color: #000000;
+    transform: scale(0.98);
+}
+
+.titulo-formulario {
+    font-family: 'Oswald-Bold', sans-serif;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* ================================= */
+/* ESTILOS PARA CIUDAD.HTML (De Santi)*/ 
+/* ================================= */
+
+/* CABECERA DE CIUDAD */
+
+header {
+    background-color: #474747;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Bebas_Neue', sans-serif;
+    font-size: 50px;
+    color: white;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Oswald-Bold', sans-serif;
+    font-size: 20px;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+
+/*La descripcion e informacion principal (el principio)*/
+
+main {
+    padding: 30px;
+}
+
+main > p {
+    text-align: center;
+    font-size: 18px;
+}
+
+
+/*Imagen principal*/
+
+figure {
+    text-align: center;
+    margin: 30px auto;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+figcaption {
+    margin-top: 10px;
+    font-style: italic;
+}
+
+
+/*Info de ciudad*/
+
+section {
+    background-color: #474747;
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+section h2 {
+    background-color: #a1a0a0;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Oswald-Bold', sans-serif;
+}
+
+section h3 {
+    font-family: 'Oswald-Bold', sans-serif;
+    color: white;
+    margin-top: 25px;
+}
+
+section p {
+    color: white;
+    line-height: 1.6;
+}
+
+
+/*Imagen toda fachera*/
+
+section img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+
+/*Lista de mas lugares */
+
+section ul {
+    margin-left: 30px;
+}
+
+section li {
+    margin-bottom: 10px;
+}
+
+
+/* Datos clave de ciudad */
+
+section dl {
+    background-color: #524e4e;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+section dt {
+    font-family: 'Oswald-Bold', sans-serif;
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+section dd {
+    color: white;
+    margin-bottom: 15px;
+}
+
+
+/* Pie de pagina de ciudad */
+
+footer {
+    background-color: #474747;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+footer p {
+    color: white;
+    margin: 0;
+}
