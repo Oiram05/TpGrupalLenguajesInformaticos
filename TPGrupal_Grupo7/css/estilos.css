@@ -398,3 +398,161 @@ dd {
     text-align: center;
     margin-bottom: 10px;
 }
+
+/* ================================= */
+/* ESTILOS PARA CIUDAD.HTML (De Santi)*/ 
+/* ================================= */
+
+/* CABECERA DE CIUDAD */
+
+header {
+    background-color: #474747;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Bebas_Neue', sans-serif;
+    font-size: 50px;
+    color: white;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Oswald-Bold', sans-serif;
+    font-size: 20px;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+
+/*La descripcion e informacion principal (el principio)*/
+
+main {
+    padding: 30px;
+}
+
+main > p {
+    text-align: center;
+    font-size: 18px;
+}
+
+
+/*Imagen principal*/
+
+figure {
+    text-align: center;
+    margin: 30px auto;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+figcaption {
+    margin-top: 10px;
+    font-style: italic;
+}
+
+
+/*Info de ciudad*/
+
+section {
+    background-color: #474747;
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+section h2 {
+    background-color: #a1a0a0;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Oswald-Bold', sans-serif;
+}
+
+section h3 {
+    font-family: 'Oswald-Bold', sans-serif;
+    color: white;
+    margin-top: 25px;
+}
+
+section p {
+    color: white;
+    line-height: 1.6;
+}
+
+
+/*Imagen toda fachera*/
+
+section img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+
+/*Lista de mas lugares */
+
+section ul {
+    margin-left: 30px;
+}
+
+section li {
+    margin-bottom: 10px;
+}
+
+
+/* Datos clave de ciudad */
+
+section dl {
+    background-color: #524e4e;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+section dt {
+    font-family: 'Oswald-Bold', sans-serif;
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+section dd {
+    color: white;
+    margin-bottom: 15px;
+}
+
+
+/* Pie de pagina de ciudad */
+
+footer {
+    background-color: #474747;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+footer p {
+    color: white;
+    margin: 0;
+}
