@@ -20,7 +20,7 @@ body {
     margin: 0;
     padding: 0;
     color: rgb(255, 255, 255);
-    background-color: #888888;
+    background-color: #c2c2c2;
 }
 
 
@@ -38,7 +38,7 @@ body {
 .menu-pestañas {
     list-style-type: none;
     margin: -10px;
-    padding: 400px;
+    padding: 20px;
     display: flex;
     gap: 30px;
 
@@ -73,7 +73,7 @@ body {
     width: 100px;
     list-style-type: none;
     margin: -10px;
-    padding: 1000px;
+    padding: 10px;
     display: flex;
     gap: 30px;
 
@@ -204,6 +204,7 @@ body {
 }
 
 
+/*ESTILO PARA EL FORMULARIO DE REGISTRO*/
 .formulario-registro {
     font-family: 'Oswald-Bold', sans-serif;
     text-decoration-line: none;
