@@ -44,8 +44,7 @@ body {
     margin: -10px;
     padding: 20px;
     display: flex;
-    gap: 30px;
-
+    gap: 30px; 
 /*Texto dentro de las pestañas*/
     font-size: 21px;
     background-color: #474747;
@@ -54,6 +53,7 @@ body {
     text-decoration: none;
     border-radius: 100px;
     font-weight: bold;
+    z-index: 4;
 }
 
 .menu-pestañas li a {
@@ -74,32 +74,35 @@ body {
 /*SECCION DE REGISTRO*/
 .seccion-regristro {
 /*POSICIONAMIENTO Y TAMAÑO*/
+    text-decoration-line: none;
     width: 110px;
     list-style-type: none;
     margin: -10px;
     padding: 10px;
     display: flex;
     gap: 30px;
-
+    
 /*FUENTE PERSONALIZADA Y RECUADRO*/
     font-family: 'Oswald-Bold', sans-serif;
-    text-decoration-line: none;
+    
     font-size: 20px;
     background-color: #474747;
     color: rgb(255, 255, 255);
     padding: 15px 10px;
     border-radius: 50px;
+    z-index: 3;
 }
 
 
 /*VIDEO INICIAL MOSTRANDO LA CIUDAD*/
 .video-inicial {
     position: relative;
-    top: 0px;
+    top: -80px;
     left: 0;
     width: 100vw;
-    height: 800px;
+    height: 700px;
     overflow: hidden;
+    z-index: -1;
 }
 
 .video-inicial video {
@@ -124,12 +127,12 @@ body {
 /*TEXTO ENCIMA DEL VIDEO*/
 .contenido-cabecera {
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -20%);
     text-align: center;
     color: white;
-    z-index: 3;
+    z-index: 1;
     /* Lo pone bien al frente para que se pueda leer */
     width: 100%;
     /*Hace que el bloque ocupe todo el ancho de la pantalla.*/
@@ -143,6 +146,7 @@ body {
     border-radius: 10px;
     color: rgb(255, 254, 254);
     text-shadow: 5px 5px 30px rgba(17, 17, 17, 0.904);
+    z-index: 1;
 }
 
 .contenido-cabecera h2 {
@@ -152,6 +156,7 @@ body {
     display: inline;
     color: rgb(255, 255, 255);
     text-shadow: 5px 5px 30px rgba(17, 17, 17, 0.904);
+    z-index: 1;
 }
 
 
@@ -194,6 +199,7 @@ body {
     font-weight: bold;
 }
 
+/*TEXTO DE "RECORRE LA CIUDAD" DEBAJO DEL VIDEO DE BIENVENIDA*/ 
 .texto-lugares{
     font-family: 'Oswald-Bold', sans-serif;
     background-color: #555555;
@@ -210,7 +216,7 @@ body {
 }
 
 
-/*IMAGENES ESTILO GALERIA*/
+/*4 IMAGENES ESTILO GALERIA UNA AL LADO DE LA OTRA*/
 /*Muestra de imagenes de lugares mas visitados de la ciudad*/
 .lugares-galeria {
     display: flex;
