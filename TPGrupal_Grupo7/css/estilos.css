@@ -568,156 +568,221 @@ dd {
 /* ESTILOS PARA CIUDAD.HTML (De Santi)*/ 
 /* ================================= */
 
-/* CABECERA DE CIUDAD */
+/* ============================================================ */
+/* ESTILOS PARA CIUDAD.HTML (De Santi - Adaptado al estilo Index)*/ 
+/* ============================================================ */
 
-header {
-    background-color: #474747;
+/* CABECERA DE CIUDAD */
+body.pagina-ciudad header {
+    background-color: transparent;
     padding: 20px;
     text-align: center;
 }
 
-header h1 {
+body.pagina-ciudad header h1 {
     font-family: 'Bebas_Neue', sans-serif;
-    font-size: 50px;
-    color: white;
+    font-size: 60px;
+    color: #ffffff;
+    text-shadow: 5px 5px 30px rgba(17, 17, 17, 0.9);
+    margin-bottom: 20px;
 }
 
-header nav ul {
+/* MENÚ DE NAVEGACIÓN EN CIUDAD */
+body.pagina-ciudad header nav ul {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 20px;
     list-style: none;
     padding: 0;
-    margin: 20px 0;
+    margin: 10px 0;
+    flex-wrap: wrap;
 }
 
-header nav ul li a {
-    color: white;
+body.pagina-ciudad header nav ul li a {
+    font-family: 'Bebas_Neue', sans-serif;
+    font-size: 22px;
+    color: #ffffff;
+    background-color: #4b5e92;
+    padding: 8px 24px;
     text-decoration: none;
+    border-radius: 100px;
+    font-weight: bold;
+    display: inline-block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.pagina-ciudad header nav ul li a:hover,
+body.pagina-ciudad header nav ul li a.active {
+    transform: scale(0.95);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+    background-color: #6a84c7;
+}
+
+/* SECCIÓN PRINCIPAL Y TEXTOS INTRODUCTORIOS */
+.contenido-principal {
+    padding: 30px 15px;
+}
+
+.introduccion {
     font-family: 'Oswald-Bold', sans-serif;
-    font-size: 20px;
-}
-
-header nav ul li a:hover {
-    text-decoration: underline;
-}
-
-
-/*La descripcion e informacion principal (el principio)*/
-
-main {
-    padding: 30px;
-}
-
-main > p {
     text-align: center;
-    font-size: 18px;
+    font-size: 24px;
+    color: #ffffff;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
 }
 
+.enlace-datos {
+    font-family: 'Bebas_Neue', sans-serif;
+    display: inline-block;
+    background-color: #4b5e92;
+    color: #ffffff;
+    padding: 10px 25px;
+    font-size: 22px;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
 
-/*Imagen principal*/
+.enlace-datos:hover {
+    background-color: #6a84c7;
+    color: #ffffff;
+    transform: scale(1.05);
+}
 
-figure {
+/* IMAGEN PRINCIPAL */
+.imagen-principal {
     text-align: center;
     margin: 30px auto;
 }
 
-figure img {
+.imagen-principal img {
     max-width: 100%;
     height: auto;
     border-radius: 15px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.6);
 }
 
-figcaption {
+.imagen-principal figcaption {
     margin-top: 10px;
+    font-family: 'Oswald', sans-serif;
     font-style: italic;
+    color: #e0e0e0;
 }
 
-
-/*Info de ciudad*/
-
-section {
-    background-color: #474747;
-    color: white;
+/* SECCIÓN CONTENEDORA SOBRE CIUDAD */
+.seccion-ciudad {
+    background-color: rgba(75, 94, 146, 0.85); /* Tono azul transparente o sólido del index */
+    color: #ffffff;
     padding: 30px;
     border-radius: 15px;
     margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
-section h2 {
-    background-color: #a1a0a0;
-    color: white;
-    padding: 10px;
+.titulo-seccion {
+    background-color: #6a84c7;
+    color: #ffffff;
+    padding: 12px;
     border-radius: 10px;
     text-align: center;
-    font-family: 'Oswald-Bold', sans-serif;
+    font-family: 'Bebas_Neue', sans-serif;
+    font-size: 40px;
+    letter-spacing: 1px;
 }
 
-section h3 {
-    font-family: 'Oswald-Bold', sans-serif;
-    color: white;
-    margin-top: 25px;
+/* ARTÍCULOS E HISTORIA */
+.seccion-ciudad article {
+    background-color: #3b4b75;
+    color: #ffffff;
+    border: 1px solid #6a84c7;
+    border-left: 6px solid #9bb1f0;
+    padding: 20px;
+    margin: 25px 0;
+    border-radius: 10px;
+    font-family: 'Oswald', sans-serif;
 }
 
-section p {
-    color: white;
+.seccion-ciudad article h3 {
+    font-family: 'Bebas_Neue', sans-serif;
+    font-size: 30px;
+    color: #ffffff;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 5px;
+}
+
+.seccion-ciudad article p {
+    color: #ffffff;
     line-height: 1.6;
+    font-size: 18px;
 }
 
-
-/*Imagen toda fachera*/
-
-section img {
+.imagen-secundaria {
     display: block;
     margin: 20px auto;
     max-width: 100%;
-    height: auto;
-    border-radius: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-
-/*Lista de mas lugares */
-
-section ul {
-    margin-left: 30px;
-}
-
-section li {
-    margin-bottom: 10px;
-}
-
-
-/* Datos clave de ciudad */
-
-section dl {
-    background-color: #524e4e;
-    padding: 20px;
+/* TARJETAS DE BARRIOS / ZONAS */
+.tarjeta-zona {
+    background-color: #2a3656 !important;
+    border: 1px solid #6a84c7 !important;
     border-radius: 10px;
+    transition: transform 0.3s ease;
 }
 
-section dt {
-    font-family: 'Oswald-Bold', sans-serif;
-    font-size: 20px;
-    margin-top: 15px;
+.tarjeta-zona:hover {
+    transform: translateY(-5px);
 }
 
-section dd {
-    color: white;
+.tarjeta-zona .card-title {
+    font-family: 'Bebas_Neue', sans-serif;
+    color: #9bb1f0 !important;
+    font-size: 26px;
+}
+
+.tarjeta-zona .card-text {
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+/* LISTA DE DATOS CLAVE (<dl>) */
+.lista-datos {
+    background-color: #2a3656;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #6a84c7;
+}
+
+.lista-datos dt {
+    font-family: 'Bebas_Neue', sans-serif;
+    font-size: 24px;
+    color: #9bb1f0;
+    margin-top: 10px;
+    letter-spacing: 1px;
+}
+
+.lista-datos dd {
+    font-family: 'Oswald', sans-serif;
+    color: #ffffff;
+    font-size: 18px;
+    margin-left: 0;
     margin-bottom: 15px;
 }
 
-
-/* Pie de pagina de ciudad */
-
-footer {
-    background-color: #474747;
+/* PIE DE PÁGINA */
+.pie-pagina {
+    background-color: #3d3d3d;
     text-align: center;
     padding: 20px;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
-footer p {
-    color: white;
+.pie-pagina p {
+    font-family: 'Oswald', sans-serif;
+    color: #ffffff;
     margin: 0;
 }
