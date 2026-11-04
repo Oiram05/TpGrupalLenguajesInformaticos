@@ -30,17 +30,17 @@ body {
     background-position: center;
 }
 
-
 /* ============================================================*/
 /* PESTAÑAS DE NAVEGACION ENTRES LAS SECCIONES DE LA PAGINA    */
 /* ============================================================*/
+
 /* Acomodar las pestañas de navegación en la parte superior izquierda del index*/
 .header-superior {
     font-family: 'Bebas_Neue', sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 20px;
+    padding: 30px;
 }
 
 .menu-pestañas {
