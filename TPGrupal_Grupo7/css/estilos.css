@@ -2,11 +2,6 @@
 /* ESTILOS PARA CIUDAD.HTML (De Mario)*/ 
 /* ================================= */
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
 
 :root {
     --color-principal: #4b5e92;
@@ -15,6 +10,7 @@
     --color-texto: #ffffff;
     --color-acento: #9bb1f0;
     --color-borde: #777777;
+    --color-oscuro: #141414;
     --fuente-principal: 'Oswald', sans-serif;
     --fuente-secundaria: 'Bebas_Neue', sans-serif;
 }
@@ -34,12 +30,40 @@
 
 /*Color principal de la pagina y fuente*/
 body {
-    margin: 0;
-    padding: 0;
     color: var(--color-texto);
     background-image: url('../Imagenes/FONDO1.jpg');
     background-size: cover;
     background-position: center;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+/* ================================= */
+/* MODO OSCURO                       */
+/* ================================= */
+[data-btn="dark"] {
+    --color-principal: #111524;
+    --color-secundario: #2a3656;
+    --color-fondo: #07090f;
+    --color-texto: #e2e8f0;
+    --color-acento: #273250;
+    --color-borde: #334155;
+    --color-oscuro: #05070a;
+}
+
+[data-btn="dark"] body {
+    background-image: url('../Imagenes/FONDO2.png');
+}
+
+[data-btn="dark"] .columna-caja,
+[data-btn="dark"] section,
+[data-btn="dark"] .seccion-ciudad {
+    background-color: var(--color-secundario) !important;
 }
 
 /* ============================================================*/
@@ -95,6 +119,31 @@ body {
     height: 40px;
     align-items: left;
 }
+
+/*BOTON DE MODO OSCURO*/
+.modo-oscuro {
+    display: flex;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: var(--color-oscuro);
+    color: var(--color-texto);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 10;
+    transition: all .3s ease;
+}
+
+.modo-oscuro:hover {
+    background-color: var(--color-borde);
+    color: var(--color-oscuro);
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+}
+
 
 /* ================================= */
 /* VIDEO DE BIENVENIDA               */
