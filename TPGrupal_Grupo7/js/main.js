@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    // Función para cambiar la ruta del video según el tema
+    // CAMBIAR VIDEO DE BIENVENIDA DE DIA POR EL DE NOCHE
     function actualizarVideo(theme) {
         if (!sourceVideo || !videoFondo) return;
 
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
             sourceVideo.src = "Imagenes/MuestraDia.mp4"; // Tu video de día original
         }
         
-        // Es necesario recargar el video para que el navegador reproduzca el nuevo archivo
+        //recargo el video para que el navegador reproduzca el nuevo archivo
         videoFondo.load();
         videoFondo.play();
     }

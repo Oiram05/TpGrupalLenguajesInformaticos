@@ -8,7 +8,7 @@
     --color-secundario: #6a84c7;
     --color-fondo: #1e2846;
     --color-texto: #ffffff;
-    --color-acento: #9bb1f0;
+    --color-acento: #6f81b4;
     --color-borde: #777777;
     --color-oscuro: #141414;
     --fuente-principal: 'Oswald', sans-serif;
@@ -47,11 +47,11 @@ body {
 /* MODO OSCURO                       */
 /* ================================= */
 [data-btn="dark"] {
-    --color-principal: #111524;
+    --color-principal: #202846;
     --color-secundario: #2a3656;
     --color-fondo: #07090f;
     --color-texto: #e2e8f0;
-    --color-acento: #273250;
+    --color-acento: #435483;
     --color-borde: #334155;
     --color-oscuro: #05070a;
 }
@@ -60,11 +60,11 @@ body {
     background-image: url('../Imagenes/FONDO2.png');
 }
 
-[data-btn="dark"] .columna-caja,
-[data-btn="dark"] section,
-[data-btn="dark"] .seccion-ciudad {
-    background-color: var(--color-secundario) !important;
+[data-btn="dark"] .modo-oscuro {
+    background-color: var(--color-texto);
+    color: var(--color-fondo);
 }
+
 
 /* ============================================================*/
 /* PESTAÑAS DE NAVEGACION ENTRES LAS SECCIONES DE LA PAGINA    */
@@ -602,6 +602,7 @@ dd {
     margin-bottom: 10px;
 }
 
+/*========================================================================================================================*/
 /* ============================================================ */
 /* ESTILOS PARA CIUDAD.HTML (De Santi - Adaptado al estilo Index de Mario)*/ 
 /* ============================================================ */
@@ -679,8 +680,8 @@ body.pagina-ciudad header.header-ciudad {
 .header-ciudad .navbar-nav .nav-link {
     font-family: 'Bebas_Neue', sans-serif;
     font-size: 22px;
-    color: #ffffff !important;
-    background-color: #4b5e92;
+    color: var(--color-texto) !important;
+    background-color: var(--color-principal);
     padding: 6px 20px !important;
     border-radius: 100px;
     font-weight: bold;
@@ -691,7 +692,7 @@ body.pagina-ciudad header.header-ciudad {
 
 .header-ciudad .navbar-nav .nav-link:hover,
 .header-ciudad .navbar-nav .nav-link.active {
-    background-color: #6a84c7;
+    background-color: var(--color-acento);
     transform: scale(0.95);
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
 }
@@ -722,8 +723,8 @@ body.pagina-ciudad header.header-ciudad {
 }
 
 .enlace-datos:hover {
-    background-color: #6a84c7;
-    color: #ffffff;
+    background-color: var(--color-principal);
+    color: var(--color-texto);
     transform: scale(1.05);
 }
 
