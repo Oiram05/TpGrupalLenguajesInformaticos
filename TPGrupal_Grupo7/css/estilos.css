@@ -657,7 +657,27 @@ body.pagina-ciudad header.header-ciudad {
     border: 1px solid #9bb1f0;
     z-index: 5;
 }
+/* ============================================================ */
+          /*Flexbox Avanzado y Grilla Responsiva*/
+/* ============================================================ */
 
+/* Contenedor principal en grilla flex con wrap y gap */
+.grilla-lugares-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+/* Elementos individuales flex responsivos */
+.tarjeta-flex {
+    flex: 1 1 320px;
+    margin: 0 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 /* ------------------------------------------------------------ */
 /* BOOSTRAO PART2    */
 /* ------------------------------------------------------------ */
