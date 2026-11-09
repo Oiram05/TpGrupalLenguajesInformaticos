@@ -1,111 +1,127 @@
-<!DOCTYPE html> 
-<html lang="es"> 
+<!DOCTYPE html>
+<html lang="es">
 
-<head> 
-    <meta charset="UTF-8"> 
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oficina de turismo de Ciudad Daduic</title>  
-    
-    <!-- Grilla responsiva de Bootstrap 5 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap-grid.min.css" rel="stylesheet">
-    
-    <link rel="stylesheet" href="css/estilos.css">
-</head> 
+    <title>Oficina de Turismo | Contacto</title>
 
-<body> 
-    <header> 
-        <div class="container">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="ciudad.html">Ciudad</a></li>
-                    <li><a href="lugares.html">Lugares</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                </ul>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body class="pagina-ciudad">
+    <!-- Header Sticky con Navbar Bootstrap -->
+    <header class="header-ciudad sticky-top">
+        <div class="container text-center py-2">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+                <div class="container-fluid">
+                    <a class="navbar-brand logo-dadiuc text-uppercase m-0" href="index.html"
+                        style="display:flex; gap:30px;">
+                        <img src="Imagenes/LogoGrupoBlanco.png" alt="Logo de la ciudad Daduic" class="logo-daduic">
+                        CONTACTO
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#menuContacto" aria-controls="menuContacto" aria-expanded="false"
+                        aria-label="Abrir navegación">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse justify-content-end" id="menuContacto">
+                        <ul class="navbar-nav gap-lg-2">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link" href="ciudad.html">Ciudad</a></li>
+                            <li class="nav-item"><a class="nav-link" href="lugares.html">Lugares</a></li>
+                            <li class="nav-item"><a class="nav-link active" aria-current="page"
+                                    href="contacto.html">Contacto</a></li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
         </div>
     </header>
 
-    <!-- Contenedor principal de Bootstrap -->
-    <main class="container my-4">
-        <h1 class="text-center mb-4">Información de contacto</h1> 
+    <main class="container my-5 contenido-principal">
+        <section class="seccion-ciudad p-4 rounded">
+            <h1 class="titulo-principal-ciudad text-center mb-4">Información de Contacto</h1>
 
-        <!-- Fila responsiva -->
-        <div class="row g-4">
-            
-            <!-- Columna izquierda: Tabla de horarios y datos de contacto (12 cols en celular, 6 en PC) -->
-            <div class="col-12 col-lg-6">
-                <section id="horarios">
-                    <h2>Horarios de Atención</h2>
-                    
-                    <!-- Envoltura responsiva para la tabla -->
-                    <div class="table-responsive">
-                        <table class="tabla-horarios">
-                            <thead>
-                                <tr>
-                                    <th>Día</th>
-                                    <th>Horario</th>
-                                    <th>Estado</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Lunes a Viernes</td>
-                                    <td>09:00 - 18:00</td>
-                                    <td>Abierto</td>
-                                </tr>
-                                <tr>
-                                    <td>Sábados</td>
-                                    <td>10:00 - 18:00</td>
-                                    <td>Abierto</td> <!-- Celda de estado corregida -->
-                                </tr>
-                                <tr>
-                                    <td>Domingos</td>
-                                    <td>10:00 - 14:00</td>
-                                    <td>Horario reducido</td>
-                                </tr>
-                            </tbody>
-                        </table>
+            <!-- Horarios -->
+            <div id="horarios" class="mb-5">
+                <h2 class="titulo-seccion mb-3">Horarios de Atención</h2>
+                <div class="table-responsive">
+                    <table class="tabla-horarios">
+                        <thead>
+                            <tr>
+                                <th>Día</th>
+                                <th>Horario</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Lunes a Viernes</td>
+                                <td>09:00 - 18:00</td>
+                                <td>Abierto</td>
+                            </tr>
+                            <tr>
+                                <td>Sábados</td>
+                                <td>10:00 - 18:00</td>
+                                <td>Abierto</td>
+                            </tr>
+                            <tr>
+                                <td>Domingos</td>
+                                <td>10:00 - 14:00</td>
+                                <td>Horario reducido</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Formulario -->
+            <div id="formulario-seccion">
+                <h2 class="titulo-formulario mb-4">Formulario de Contacto</h2>
+                <form action="#" method="POST" class="formulario-contacto">
+                    <div>
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
                     </div>
-                </section>
 
-                <section id="datos-contacto" class="mt-4">
-                    <address> 
-                        <p><strong>Dirección:</strong> Av Daduic 2556, Ciudad Daduic, Argentina</p>
-                        <p><strong>Email:</strong> <a href="mailto:Ciudaddaduic55@gmail.com">Ciudaddaduic55@gmail.com</a></p>
-                        <p><strong>Teléfono de contacto:</strong> <a href="tel:+54115587447">+54 11 5587-447</a></p> 
-                        <p><strong>Red social:</strong> <a href="https://instagram.com/Daduic.ok_74" target="_blank" rel="noopener noreferrer">Daduic.ok_74</a></p>
-                    </address> 
-                </section>
+                    <div>
+                        <label for="email">Correo Electrónico:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div>
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+                </form>
             </div>
+        </section>
 
-            <!-- Columna derecha: Formulario de contacto (12 cols en celular, 6 en PC) -->
-            <div class="col-12 col-lg-6">
-                <section id="contacto-seccion">
-                    <h2 class="titulo-formulario">Formulario de Contacto</h2>
-                    
-                    <form action="#" method="POST" class="formulario-contacto">
-                        <div class="form-group">
-                            <label for="nombre">Nombre:</label>
-                            <input type="text" id="nombre" name="nombre" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email">Correo Electrónico:</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="mensaje">Mensaje:</label>
-                            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-                        </div>
-
-                        <button type="submit" class="btn-enviar">Enviar Mensaje</button>
-                    </form>
-                </section>
-            </div>
-
-        </div> <!-- /.row -->
+        <address class="lista-datos p-4 rounded mt-4">
+            <p><strong>Dirección:</strong> Av. Dadiuc 2556, Ciudad Dadiuc, Argentina</p>
+            <p><strong>Email:</strong> <a href="mailto:Ciudaddaduic55@gmail.com"
+                    class="text-info">Ciudaddaduic55@gmail.com</a></p>
+            <p><strong>Teléfono:</strong> <a href="tel:+54115587447" class="text-info">+54 11 5587-447</a></p>
+            <p class="m-0"><strong>Redes sociales:</strong> <a href="#" class="text-info">@Daduic.ok_74</a></p>
+        </address>
     </main>
-</body> 
+
+    <footer class="pie-pagina text-center py-4">
+        <div class="container">
+            <p class="m-0">© 2026 Ciudad Dadiuc - Sitio Oficial de la Oficina de Turismo.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>

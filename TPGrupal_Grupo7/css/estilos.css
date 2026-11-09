@@ -2,11 +2,19 @@
 /* ESTILOS PARA CIUDAD.HTML (De Mario)*/ 
 /* ================================= */
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+
+:root {
+    --color-principal: #4b5e92;
+    --color-secundario: #6a84c7;
+    --color-fondo: #1e2846;
+    --color-texto: #ffffff;
+    --color-acento: #6f81b4;
+    --color-borde: #777777;
+    --color-oscuro: #141414;
+    --fuente-principal: 'Oswald', sans-serif;
+    --fuente-secundaria: 'Bebas_Neue', sans-serif;
 }
+
 /*AGREGAR FUENTES PARA USARSE*/
 @font-face {
     font-family: 'Oswald-Bold';
@@ -22,25 +30,53 @@
 
 /*Color principal de la pagina y fuente*/
 body {
-    margin: 0;
-    padding: 0;
-    color: rgb(255, 255, 255);
+    color: var(--color-texto);
     background-image: url('../Imagenes/FONDO1.jpg');
     background-size: cover;
     background-position: center;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+/* ================================= */
+/* MODO OSCURO                       */
+/* ================================= */
+[data-btn="dark"] {
+    --color-principal: #202846;
+    --color-secundario: #2a3656;
+    --color-fondo: #07090f;
+    --color-texto: #e2e8f0;
+    --color-acento: #435483;
+    --color-borde: #334155;
+    --color-oscuro: #05070a;
+}
+
+[data-btn="dark"] body {
+    background-image: url('../Imagenes/FONDO2.png');
+}
+
+[data-btn="dark"] .modo-oscuro {
+    background-color: var(--color-texto);
+    color: var(--color-fondo);
 }
 
 
 /* ============================================================*/
 /* PESTAÑAS DE NAVEGACION ENTRES LAS SECCIONES DE LA PAGINA    */
 /* ============================================================*/
+
 /* Acomodar las pestañas de navegación en la parte superior izquierda del index*/
 .header-superior {
     font-family: 'Bebas_Neue', sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 20px;
+    padding: 30px;
 }
 
 .menu-pestañas {
@@ -51,8 +87,8 @@ body {
     gap: 30px; 
 /*Texto dentro de las pestañas*/
     font-size: 20px;
-    background-color: #4b5e92;
-    color: rgb(255, 255, 255);
+    background-color: var(--color-principal);
+    color: var(--color-texto);
     padding: 8px 20px;
     text-decoration: none;
     border-radius: 100px;
@@ -68,42 +104,46 @@ body {
     object-fit: cover;
     border-radius: 100px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    color: rgb(255, 255, 255);
+    color: var(--color-texto);
 }
 
 .menu-pestañas li a:hover {
     transform: scale(0.95);
-    box-shadow: 0px 0px 8px rgb(255, 254, 254);
+    box-shadow: 0px 0px 8px var(--color-acento);
     
 }
 
+/*LOGO DEL GRUPO*/
+.logo-daduic {
+    width: 40px;
+    height: 40px;
+    align-items: left;
+}
 
-/* ================================= */
-/* REGISTRARSE                       */
-/* ================================= */
-/*SECCION DE REGISTRO*/
-.seccion-regristro {
-/*POSICIONAMIENTO Y TAMAÑO*/
-    width: 100px;
-    margin: -10px;
-    padding: 0px;
+/*BOTON DE MODO OSCURO*/
+.modo-oscuro {
     display: flex;
-    gap: 30px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: var(--color-oscuro);
+    color: var(--color-texto);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 10;
+    transition: all .3s ease;
 }
 
-/*FUENTE PERSONALIZADA Y RECUADRO*/
-.seccion-regristro a {
-    font-family: 'Bebas_Neue', sans-serif;
-    font-size: 20px;
-    background-color: #4b5e92;
-    color: rgb(255, 255, 255);
-    padding: 10px 10px;
-    border-radius: 50px;
-    z-index: 3;
-    list-style-type: none;
-    text-decoration-line: none;
-    color: rgb(255, 255, 255);
+.modo-oscuro:hover {
+    background-color: var(--color-borde);
+    color: var(--color-oscuro);
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
 }
+
 
 /* ================================= */
 /* VIDEO DE BIENVENIDA               */
@@ -139,16 +179,16 @@ body {
 }
 
 /* ================================= */
-/* TEXTO DE BIENVENIDA               */
+/* TITULO DE BIENVENIDA              */
 /* ================================= */
 /*TEXTO ENCIMA DEL VIDEO*/
 .contenido-cabecera {
     position: absolute;
-    top: 30%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -20%);
     text-align: center;
-    color: white;
+    color: var(--color-texto);
     z-index: 1;
     /* Lo pone bien al frente para que se pueda leer */
     width: 100%;
@@ -161,7 +201,7 @@ body {
     text-align: center;
     display: inline;
     border-radius: 10px;
-    color: rgb(255, 254, 254);
+    color: var(--color-texto);
     text-shadow: 5px 5px 30px rgba(17, 17, 17, 0.904);
     z-index: 1;
 }
@@ -171,7 +211,7 @@ body {
     font-family: 'Bebas_Neue', sans-serif;
     text-align: center;
     display: inline;
-    color: rgb(255, 255, 255);
+    color: var(--color-texto);
     text-shadow: 5px 5px 30px rgba(17, 17, 17, 0.904);
     z-index: 1;
 }
@@ -181,44 +221,42 @@ body {
 /* ================================= */
 /*CUADROS DE TEXTO JUNTOS DEBAJO DEL VIDEO DE BIENVENIDA*/
 /* Contenedor de dos columnas para los textos uno al lado del otro*/
-.contenedor-dos-columnas {
-    display: grid;
-    grid-template-columns: auto 400px;
-    gap: 20px;
-    justify-content: space-between;
-    gap: 30px;
-    margin-bottom: 30px;
-}
-
+/* Ajuste de contenedor y títulos modif santi*/
 .columna-caja {
     font-family: 'Oswald', sans-serif;
     font-size: 20px;
-    flex: 1;
     text-align: center;
-    background-color: #4b5e92;
-    padding: 30px;
+    background-color: var(--color-principal);
+    padding: 30px 20px;
     border-radius: 15px;
-    color: rgb(255, 255, 255);
-    text-shadow: 5px 6px 10px rgba(0, 0, 0, 0.904);
-}
-.columna-caja ol{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;    
+    color: var(--color-texto);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 .titulo-columna {
     font-family: 'Bebas_Neue', sans-serif;
-    background-color: #6a84c7;
-    color: #ffffff;
-    font-size: 30px;
-    padding: 5px 100px;
+    background-color: var(--color-acento);
+    color: var(--color-texto);
+    font-size: 28px;
+    padding: 8px 15px; /* Se sacó el padding de 100px que rompía el cartel */
     border-radius: 10px;
     text-align: center;
     margin-bottom: 10px;
     font-weight: bold;
 }
 
+/* Lista numerada de lugares */
+.columna-caja ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.columna-caja ol li {
+    margin-bottom: 8px;
+    font-size: 18px;
+    white-space: nowrap; /* Evita que el texto de los ítems se corte en vertical */
+}
 /*AGRANDAR MARGEN DEL ESPACIADO BR*/
 .br-grande {
   display: block;
@@ -229,16 +267,16 @@ body {
 /*TEXTO DE "RECORRE LA CIUDAD" DEBAJO DEL VIDEO DE BIENVENIDA*/ 
 .texto-lugares{
     font-family: 'Bebas_Neue', sans-serif;
-    background-color: #4b5e92;
-    color:rgb(255, 255, 255);
+    background-color: var(--color-principal);
+    color: var(--color-texto);
     text-shadow: 5px 5px 30px rgba(17, 17, 17, 0.904);
 }
 
 .texto-lugares h3{
     font-size: 50px;
     text-align: center;
-    background-color: #4b5e92;
-    color:rgb(255, 255, 255);
+    background-color: var(--color-acento);
+    color: var(--color-texto);
     text-shadow: 5px 5px 30px rgba(17, 17, 17, 0.904);
 }
 
@@ -329,7 +367,7 @@ body {
 /* ================================= */
 .pie-de-pagina{
     background-color: #3d3d3d;
-    color: #FFFFFF;
+    color: var(--color-texto);
     letter-spacing: 0.5px;
     margin: 0;
     padding: 20px;  
@@ -354,7 +392,7 @@ body {
     font-family: 'Bebas_Neue', sans-serif;
     text-decoration-line: none;
     font-size: 30px;
-    color: rgb(255, 255, 255);
+    color: var(--color-texto);
     padding: 0px 30px;
     text-align: center;
 }
@@ -364,7 +402,7 @@ body {
     text-decoration-line: none;
     font-size: 50px;
 
-    color: rgb(255, 255, 255);
+    color: var(--color-texto);
     padding: 0px 30px;
     text-align: center;
 }
@@ -564,160 +602,286 @@ dd {
     margin-bottom: 10px;
 }
 
-/* ================================= */
-/* ESTILOS PARA CIUDAD.HTML (De Santi)*/ 
-/* ================================= */
+/*========================================================================================================================*/
+/* ============================================================ */
+/* ESTILOS PARA CIUDAD.HTML (De Santi - Adaptado al estilo Index de Mario)*/ 
+/* ============================================================ */
+/* ------------------------------------------------------------ */
+/* BOOSTRAP PART1
+/* ------------------------------------------------------------ */
 
-/* CABECERA DE CIUDAD */
-
-header {
-    background-color: #474747;
-    padding: 20px;
-    text-align: center;
+/* Header Sticky (fijo al hacer scroll) */
+body.pagina-ciudad header.header-ciudad {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(30, 40, 70, 0.95) !important;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
-header h1 {
+/* Contenedor relativo para alojar badges flotantes */
+.contenedor-posicionado {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+/* Badges con posicionamiento absolute sobre las imágenes */
+.badge-ciudad-destacado {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #6a84c7;
+    color: #ffffff;
     font-family: 'Bebas_Neue', sans-serif;
-    font-size: 50px;
-    color: white;
-}
-
-header nav ul {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    list-style: none;
-    padding: 0;
-    margin: 20px 0;
-}
-
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-family: 'Oswald-Bold', sans-serif;
     font-size: 20px;
+    padding: 8px 16px;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    letter-spacing: 1px;
+    z-index: 5;
 }
 
-header nav ul li a:hover {
-    text-decoration: underline;
+.badge-insignia {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(75, 94, 146, 0.9);
+    color: #ffffff;
+    font-family: 'Oswald-Bold', sans-serif;
+    font-size: 16px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid #9bb1f0;
+    z-index: 5;
+}
+/* ============================================================ */
+          /*Flexbox Avanzado y Grilla Responsiva*/
+/* ============================================================ */
+
+/* Contenedor principal en grilla flex con wrap y gap */
+.grilla-lugares-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    align-items: stretch;
 }
 
+/* Elementos individuales flex responsivos */
+.tarjeta-flex {
+    flex: 1 1 320px;
+    margin: 0 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* ------------------------------------------------------------ */
+/* BOOSTRAO PART2    */
+/* ------------------------------------------------------------ */
 
-/*La descripcion e informacion principal (el principio)*/
-
-main {
-    padding: 30px;
+/* Marca/Título del header alineado a la izquierda */
+.header-ciudad .logo-dadiuc {
+    font-family: 'Bebas_Neue', sans-serif;
+    font-size: 30px !important;
+    color: #ffffff !important;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
 }
 
-main > p {
+/* Flexbox para mantener los botones a la derecha */
+.header-ciudad .navbar-collapse {
+    justify-content: flex-end;
+}
+
+/* Estilo para los links de la Navbar responsiva de Bootstrap */
+.header-ciudad .navbar-nav .nav-link {
+    font-family: 'Bebas_Neue', sans-serif;
+    font-size: 22px;
+    color: var(--color-texto) !important;
+    background-color: var(--color-principal);
+    padding: 6px 20px !important;
+    border-radius: 100px;
+    font-weight: bold;
+    display: inline-block;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 4px;
+}
+
+.header-ciudad .navbar-nav .nav-link:hover,
+.header-ciudad .navbar-nav .nav-link.active {
+    background-color: var(--color-acento);
+    transform: scale(0.95);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+}
+
+/* SECCIÓN PRINCIPAL Y TEXTOS INTRODUCTORIOS */
+.contenido-principal {
+    padding: 30px 15px;
+}
+
+.introduccion {
+    font-family: 'Oswald-Bold', sans-serif;
     text-align: center;
-    font-size: 18px;
+    font-size: 24px;
+    color: #ffffff;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
 }
 
+.enlace-datos {
+    font-family: 'Bebas_Neue', sans-serif;
+    display: inline-block;
+    background-color: #4b5e92;
+    color: #ffffff;
+    padding: 10px 25px;
+    font-size: 22px;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
 
-/*Imagen principal*/
+.enlace-datos:hover {
+    background-color: var(--color-principal);
+    color: var(--color-texto);
+    transform: scale(1.05);
+}
 
-figure {
+/* IMAGEN PRINCIPAL */
+.imagen-principal {
     text-align: center;
     margin: 30px auto;
 }
 
-figure img {
+.imagen-principal img {
     max-width: 100%;
     height: auto;
     border-radius: 15px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.6);
 }
 
-figcaption {
+.imagen-principal figcaption {
     margin-top: 10px;
+    font-family: 'Oswald', sans-serif;
     font-style: italic;
+    color: #e0e0e0;
 }
 
-
-/*Info de ciudad*/
-
-section {
-    background-color: #474747;
-    color: white;
+/* SECCIÓN CONTENEDORA SOBRE CIUDAD */
+.seccion-ciudad {
+    background-color: rgba(75, 94, 146, 0.85);
+    color: #ffffff;
     padding: 30px;
     border-radius: 15px;
     margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
-section h2 {
-    background-color: #a1a0a0;
-    color: white;
-    padding: 10px;
+.titulo-seccion {
+    background-color: #6a84c7;
+    color: #ffffff;
+    padding: 12px;
     border-radius: 10px;
     text-align: center;
-    font-family: 'Oswald-Bold', sans-serif;
+    font-family: 'Bebas_Neue', sans-serif;
+    font-size: 40px;
+    letter-spacing: 1px;
 }
 
-section h3 {
-    font-family: 'Oswald-Bold', sans-serif;
-    color: white;
-    margin-top: 25px;
+/* ARTÍCULOS E HISTORIA */
+.seccion-ciudad article {
+    background-color: #3b4b75;
+    color: #ffffff;
+    border: 1px solid #6a84c7;
+    border-left: 6px solid #9bb1f0;
+    padding: 20px;
+    margin: 25px 0;
+    border-radius: 10px;
+    font-family: 'Oswald', sans-serif;
 }
 
-section p {
-    color: white;
+.seccion-ciudad article h3 {
+    font-family: 'Bebas_Neue', sans-serif;
+    font-size: 30px;
+    color: #ffffff;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 5px;
+}
+
+.seccion-ciudad article p {
+    color: #ffffff;
     line-height: 1.6;
+    font-size: 18px;
 }
 
-
-/*Imagen toda fachera*/
-
-section img {
+.imagen-secundaria {
     display: block;
     margin: 20px auto;
     max-width: 100%;
-    height: auto;
-    border-radius: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-
-/*Lista de mas lugares */
-
-section ul {
-    margin-left: 30px;
-}
-
-section li {
-    margin-bottom: 10px;
-}
-
-
-/* Datos clave de ciudad */
-
-section dl {
-    background-color: #524e4e;
-    padding: 20px;
+/* TARJETAS DE BARRIOS / ZONAS */
+.tarjeta-zona {
+    background-color: #2a3656 !important;
+    border: 1px solid #6a84c7 !important;
     border-radius: 10px;
+    transition: transform 0.3s ease;
 }
 
-section dt {
-    font-family: 'Oswald-Bold', sans-serif;
-    font-size: 20px;
-    margin-top: 15px;
+.tarjeta-zona:hover {
+    transform: translateY(-5px);
 }
 
-section dd {
-    color: white;
+.tarjeta-zona .card-title {
+    font-family: 'Bebas_Neue', sans-serif;
+    color: #9bb1f0 !important;
+    font-size: 26px;
+}
+
+.tarjeta-zona .card-text {
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+/* LISTA DE DATOS CLAVE (<dl>) */
+.lista-datos {
+    background-color: #2a3656;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #6a84c7;
+}
+
+.lista-datos dt {
+    font-family: 'Bebas_Neue', sans-serif;
+    font-size: 24px;
+    color: #9bb1f0;
+    margin-top: 10px;
+    letter-spacing: 1px;
+}
+
+.lista-datos dd {
+    font-family: 'Oswald', sans-serif;
+    color: #ffffff;
+    font-size: 18px;
+    margin-left: 0;
     margin-bottom: 15px;
 }
 
-
-/* Pie de pagina de ciudad */
-
-footer {
-    background-color: #474747;
+/* PIE DE PÁGINA */
+.pie-pagina {
+    background-color: #3d3d3d;
     text-align: center;
     padding: 20px;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
-footer p {
-    color: white;
+.pie-pagina p {
+    font-family: 'Oswald', sans-serif;
+    color: #ffffff;
     margin: 0;
 }

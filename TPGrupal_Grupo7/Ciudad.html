@@ -1,147 +1,241 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Conocé Ciudad Dadiuc, su historia, sus barrios y sus principales atractivos turísticos.">
+
+    <title>Sobre Ciudad Dadiuc | Turismo</title>
+    <!-- Bootstrap CSS — antes del CSS propio -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS propio del sitio -->
     <link rel="stylesheet" href="css/estilos.css">
-    <title>Nuestra hermosa Ciudad Dadiuc</title>
+    <!-- Bootstrap JS — antes del body -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
 </head>
-<body> 
-<header>
-    <h1>Sobre nuestra Ciudad Dadiuc</h1> 
-<nav>
-    <ul>
-        <li><a href="index.html">-Vuelve al Inicio</a></li>
-        <li><a href="lugares.html">-Más lugares</a></li>
-        <li><a href="contacto.html">-Contáctanos</a></li>
-        <li><a href="ciudad.html">-Nuestra Ciudad</a></li>
-    </ul>
-</nav>
- </header>     
-<main>
 
-<p>Bienvenidos a nuestra hermosa ciudad, donde la historia y la modernidad se encuentran en perfecta armonía.</p>
-<p>
-    <a href="#datos-clave">Conocé los datos clave de nuestra ciudad</a>
-</p>   
-    <figure>
-        <img src="Imagenes/Imagen_De_Ciudad.jpg" alt="Ciudad Dadiuc" width="700" height="400">
-        <figcaption>Vista panorámica de Ciudad Dadiuc</figcaption>
-    </figure>
+<body class="pagina-ciudad">
+    <!-- Header Sticky con título a la izquierda y menú a la derecha -->
+    <header class="header-ciudad sticky-top">
+        <div class="container-fluid px-4 py-2">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
 
-<section>
-    <h2>Sobre Ciudad Dadiuc</h2>
+                <a class="navbar-brand logo-dadiuc text-uppercase m-0" href="index.html"
+                    style="display:flex; gap:30px;">
+                    <img src="Imagenes/LogoGrupoBlanco.png" alt="Logo de la ciudad Daduic" class="logo-daduic">
+                    Sobre nuestra Ciudad Dadiuc
+                </a>
 
-    <h3>Una ciudad con mucha historia</h3>
-    <p>
-        Desde sus primeros días, Ciudad Dadiuc se destacó por su imponente
-        arquitectura, sus grandes avenidas y su ubicación estratégica.
-        Con el paso del tiempo, pequeños asentamientos fueron dando lugar
-        a una enorme metrópolis, convirtiendo a la ciudad en uno de los
-        principales centros urbanos del país.
-    </p>
+                <!-- Botón Hamburguesa para Mobile -->
+                <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#menuCiudad" aria-controls="menuCiudad" aria-expanded="false"
+                    aria-label="Abrir navegación">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-    <h3>Entre tradición y modernidad</h3>
-    <p>
-        Recorrer Ciudad Daciuc es descubrir una ciudad llena de contrastes.
-        Sus antiguos edificios y barrios históricos conviven con enormes
-        rascacielos, modernos centros comerciales y una intensa vida urbana.
-        Por ejemplo, tenemos la Imponente Torre Errot un símbolo de la modernidad y el progreso positivo de la ciudad.
-    </p>
-    <img src="Imagenes/torreErrot.jpg"
-        alt="Torre Errot" width="400" height="300">
-    <p>
-        Cada calle tiene una historia que contar. Desde la zona portuaria
-        hasta el centro de la ciudad, los visitantes pueden encontrar
-        lugares únicos y disfrutar de una arquitectura que combina
-        diferentes épocas.
-    </p>
-
-    <h3>¿Por qué visitar Ciudad Dadiuc?</h3>
-    <p>
-        Hoy, la ciudad invita a descubrir sus calles, conocer su historia
-        y vivir una experiencia diferente. Su arquitectura, sus barrios,
-        su vida nocturna y sus misterios hacen de Ciudad Dadiuc un destino único.
-    </p>
-
-    <p>
-        <strong>
-            Ven a conocer una ciudad donde cada esquina tiene una historia
-            y donde lo inesperado puede suceder en cualquier momento.
-            Ciudad Dadiuc te espera.
-        </strong>
-    </p>
+                <!-- Menú de Navegación Alineado a la Derecha -->
+                <div class="collapse navbar-collapse justify-content-end" id="menuCiudad">
+                    <ul class="navbar-nav gap-lg-2 mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="ciudad.html">Ciudad</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="lugares.html">Lugares</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                    
+                </div>
+                
+            </nav>
+            
+        </div>
+       
+    </header>
     
+    <main class="container my-5 contenido-principal">
 
-<h3>Costumbres de Ciudad Dadiuc</h3>
+        <p class="fs-4 text-center mb-4 introduccion">
+            Bienvenidos a nuestra hermosa ciudad, donde la historia y la modernidad se encuentran en perfecta armonía.
+        </p>
 
-<p>
-    Los habitantes de Ciudad Dadiuc mantienen diversas costumbres que
-    forman parte de la identidad de la ciudad. Una de las más importantes
-    es disfrutar de sus espacios culturales, recorrer sus barrios históricos
-    y participar de las actividades nocturnas.
-</p>
+        <p class="text-center mb-5">
+            <a class="btn btn-outline-light enlace-datos" href="#datos-clave">
+                Conocé los datos clave de nuestra ciudad ↓
+            </a>
+        </p>
 
-<p>
-    También es tradición reunirse en las plazas y espacios públicos durante
-    los eventos de la ciudad, especialmente durante las celebraciones
-    organizadas por la comunidad.
-</p>
+        <figure class="figure w-100 text-center mb-5 imagen-principal">
+            <img src="Imagenes/CIUDAD.jpg" alt="Vista panorámica de Ciudad Dadiuc"
+                class="figure-img img-fluid rounded shadow-lg">
+            <figcaption class="figure-caption text-light mt-2">Vista panorámica de Ciudad Dadiuc</figcaption>
+        </figure>
 
-<h3>Barrios y zonas de Ciudad Dadiuc</h3>
-    <p>
-    Ciudad Dadiuc está formada por diferentes barrios y zonas, cada uno
-    con una identidad propia. Entre los más conocidos se encuentran
-    el centro de la ciudad, la zona portuaria y los barrios históricos.
-    </p>
+        <section class="seccion-ciudad p-4 rounded" aria-labelledby="titulo-ciudad">
 
-<ul>
-    <li><strong>Centro de Ciudad Dadiuc:</strong> zona de grandes edificios, comercios y oficinas.</li>
-    <li><strong>Zona Portuaria:</strong> área cercana al puerto, reconocida por su actividad comercial.</li>
-    <li><strong>Barrios Históricos:</strong> sectores donde se conservan edificios y calles tradicionales.</li>
-</ul> 
-    
-<h3 id="datos-clave">Datos clave de Ciudad Dadiuc</h3>
+            <h2 id="titulo-ciudad" class="titulo-seccion text-center mb-4">
+                Sobre Ciudad Dadiuc
+            </h2>
 
-<dl>
-    <dt><strong>Ubicación</strong></dt>
-   
-<dd>Costa Oeste de Argentina.</dd>
-    <dt><strong>Fundación</strong></dt>
-        <dd>
-            Ciudad Dadiuc fue fundada oficialmente por un comerciante europeo
-        cerca de la década de 1830, aunque la zona ya estaba habitada por colonos europeos.
-        </dd>
+            <article class="bloque-historia mb-4 p-4 rounded">
+                <h3 class="h4 border-bottom pb-2 mb-3">Una ciudad con mucha historia</h3>
+                <p>
+                    Ciudad Dadiuc es una ciudad marcada por el paso del tiempo.
+                    Sus construcciones, avenidas y ubicación estratégica cuentan
+                    la historia de un lugar que comenzó con pequeños asentamientos
+                    y creció hasta convertirse en una gran metrópolis.
+                </p>
+            </article>
 
-    
-    <dt><strong>Habitantes</strong></dt>
-    <dd>
-    Se estima que entre 8 y 9 millones de habitantes viven y trabajan en la ciudad.
-    </dd>
+            <article class="bloque-modernidad mb-4 p-4 rounded">
+                <h3 class="h4 border-bottom pb-2 mb-3">Entre tradición y modernidad</h3>
+                <p>
+                    En Ciudad Dadiuc conviven edificios antiguos, barrios históricos,
+                    modernos rascacielos y grandes centros comerciales.
+                    Uno de sus símbolos más reconocidos es la Torre Errot,
+                    que forma parte del paisaje urbano.
+                </p>
 
-    <dt><strong>Arquitectura</strong></dt>
-    <dd>Combina edificios históricos, rascacielos modernos y barrios tradicionales.</dd>
+                <div class="text-center my-4">
+                    <img src="Imagenes/torreErrot.jpg" alt="Torre Errot, uno de los símbolos de Ciudad Dadiuc"
+                        class="img-fluid rounded shadow imagen-secundaria" style="max-height: 400px;">
+                </div>
 
-    <dt><strong>Principal símbolo</strong></dt>
-   
-    <dd>
-        Ciudad Dadiuc es un monstruo de piedra y metal que te impresiona con solo mirarlo, 
-        donde el cielo casi no se ve porque los rascacielos neogóticos y las enormes estatuas 
-        Art Déco.
+                <p>
+                    La zona portuaria y el centro de la ciudad son puntos importantes
+                    para la actividad comercial, el encuentro de vecinos
+                    y la llegada de visitantes.
+                </p>
+            </article>
 
-    <dt><strong>Atractivos turísticos</strong></dt>
-    <dd>
-        Los puntos de interés más atractivos son: El Jardín Botánico de Dadiuc, 
-        La estatua de Lady Dadiuc, El Museo de Antigüedades de Dadiuc, El Teatro de Dadiuc y La Torre Errot.
-    </dd>
-    </dl>
+            <article class="bloque-visita mb-4 p-4 rounded">
+                <h3 class="h4 border-bottom pb-2 mb-3">¿Por qué visitar Ciudad Dadiuc?</h3>
+                <p>
+                    Nuestra ciudad ofrece propuestas para todos los gustos:
+                    paseos por zonas históricas, espacios verdes, arquitectura singular,
+                    actividades culturales y una intensa vida urbana.
+                </p>
+                <p class="fw-bold fs-5 text-center mt-3">
+                    ¡Ciudad Dadiuc te espera para que descubras todo lo que tiene para ofrecer!
+                </p>
+            </article>
 
-</section>
-</main>    
-<footer>
-            <p>&copy; 2026 -<em>Ciudad Dadiuc - Sitio Oficial de Oficina de Turismo</em></p>
+            <article class="bloque-costumbres mb-4 p-4 rounded">
+                <h3 class="h4 border-bottom pb-2 mb-3">Costumbres de Ciudad Dadiuc</h3>
+                <p>
+                    La vida cotidiana combina tradiciones locales con nuevas
+                    expresiones culturales. Sus habitantes disfrutan de los espacios
+                    culturales, los barrios históricos, la gastronomía y los encuentros
+                    en plazas y paseos.
+                </p>
+                <p>
+                    Durante el año se realizan eventos, espectáculos y actividades
+                    que reúnen a vecinos y turistas, mientras que por la noche
+                    el centro ofrece distintas propuestas recreativas.
+                </p>
+            </article>
+
+            <article class="bloque-barrios mb-5 p-4 rounded">
+                <h3 class="h4 border-bottom pb-3 mb-4">Barrios y zonas de Ciudad Dadiuc</h3>
+                <p class="mb-4">
+                    Cada sector de la ciudad tiene características propias y lugares para descubrir:
+                </p>
+
+                <div class="row g-4 zonas-grid">
+                    <div class="col-12 col-md-4">
+                        <div class="card tarjeta-zona h-100 bg-dark text-white border-secondary">
+                            <div class="card-body">
+                                <h4 class="card-title text-info fs-4">Centro</h4>
+                                <p class="card-text">
+                                    Es el corazón comercial y administrativo,
+                                    con avenidas, comercios y edificios modernos.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <div class="card tarjeta-zona h-100 bg-dark text-white border-secondary">
+                            <div class="card-body">
+                                <h4 class="card-title text-info fs-4">Zona portuaria</h4>
+                                <p class="card-text">
+                                    Se destaca por su actividad comercial,
+                                    sus muelles y sus paseos junto al agua.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <div class="card tarjeta-zona h-100 bg-dark text-white border-secondary">
+                            <div class="card-body">
+                                <h4 class="card-title text-info fs-4">Barrios históricos</h4>
+                                <p class="card-text">
+                                    Conservan construcciones tradicionales,
+                                    calles con historia y espacios culturales.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bloque-datos p-4 rounded" id="datos-clave">
+                <h3 class="h4 border-bottom pb-2 mb-4">Datos clave de Ciudad Dadiuc</h3>
+
+                <dl class="row lista-datos">
+                    <dt class="col-sm-3 fw-bold fs-5 text-warning">Ubicación</dt>
+                    <dd class="col-sm-9 mb-3">Costa Oeste de Argentina.</dd>
+
+                    <dt class="col-sm-3 fw-bold fs-5 text-warning">Fundación</dt>
+                    <dd class="col-sm-9 mb-3">
+                        Sus orígenes se remontan a la década de 1830,
+                        cuando comerciantes europeos llegaron a la zona,
+                        donde ya existían pequeños asentamientos.
+                    </dd>
+
+                    <dt class="col-sm-3 fw-bold fs-5 text-warning">Habitantes</dt>
+                    <dd class="col-sm-9 mb-3">Entre 8 y 9 millones de habitantes.</dd>
+
+                    <dt class="col-sm-3 fw-bold fs-5 text-warning">Arquitectura</dt>
+                    <dd class="col-sm-9 mb-3">
+                        Combina edificios históricos, rascacielos modernos
+                        y barrios tradicionales.
+                    </dd>
+
+                    <dt class="col-sm-3 fw-bold fs-5 text-warning">Principal símbolo</dt>
+                    <dd class="col-sm-9 mb-3">
+                        Un paisaje urbano imponente, con rascacielos neogóticos
+                        y enormes estatuas de estilo Art Déco.
+                    </dd>
+
+                    <dt class="col-sm-3 fw-bold fs-5 text-warning">Atractivos turísticos</dt>
+                    <dd class="col-sm-9 mb-3">
+                        Jardín Botánico de Dadiuc, estatua Lady Dadiuc,
+                        Museo de Antigüedades, Teatro de Dadiuc y Torre Errot.
+                    </dd>
+                </dl>
+            </article>
+
+        </section>
+
+    </main>
+
+    <footer class="pie-pagina text-center py-4 bg-dark text-white border-top border-secondary">
+        <div class="container">
+            <p class="m-0">
+                © 2026 Ciudad Dadiuc - Sitio Oficial de la Oficina de Turismo.
+            </p>
+        </div>
     </footer>
 </body>
-
 
 </html>

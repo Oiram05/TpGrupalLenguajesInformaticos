@@ -4,124 +4,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel=stylesheet href=css/estilos.css>
-    
-    <title> Lugares de Ciudad Daduic </title>
+    <title>Lugares de Ciudad Dadiuc | Turismo</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 
-<body>
-    <header>
-        <h1>Explora los lugares más hermosos de la Ciudad</h1>
-        <nav>
-            <ul>
-                <li> <a href="index.html">Inicio</a> </li>
-                <li> <a href="ciudad.html">Ciudad</a> </li>
-                <li> <a href="lugares.html">Lugares</a> </li>
-                <li> <a href="contacto.html">Contacto</a> </li>
-            </ul>
-        </nav>
+<body class="pagina-ciudad">
+
+    <!-- Header Sticky con Navbar Bootstrap -->
+    <header class="header-ciudad sticky-top">
+        <div class="container text-center py-2">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+                <div class="container-fluid">
+
+                    <a class="navbar-brand logo-dadiuc text-uppercase m-0" href="index.html"
+                        style="display:flex; gap:30px;">
+                        <img src="Imagenes/LogoGrupoBlanco.png" alt="Logo de la ciudad Daduic" class="logo-daduic">
+                        Lugares de la ciudad Dadiuc
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuLugares"
+                        aria-controls="menuLugares" aria-expanded="false" aria-label="Abrir navegación">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse justify-content-end" id="menuLugares">
+                        <ul class="navbar-nav gap-lg-2">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link" href="ciudad.html">Ciudad</a></li>
+                            <li class="nav-item"><a class="nav-link active" aria-current="page"
+                                    href="lugares.html">Lugares</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <section>
-            <h2>Ven a conocer nuestros hermosos paisajes</h2>
-            <p>Te presentamos los lugares más turísticos de nuestra Ciudad </p>
-            
-            <br>
-            
-            <p>Ir a:</p> 
-            <ul>
-            <li><a href="#Eventos"> Actividades durante el año</a></li>
-            <li><a href="#OtrosSitios"> Otros sitios para visitar </a></li>
-            </ul>
+    <main class="container my-5 contenido-principal">
+        <div class="text-center mb-5">
+            <h1 class="titulo-principal-ciudad display-4 fw-bold">Explorá los lugares más hermosos</h1>
+            <p class="fs-4 introduccion">Te presentamos los puntos turísticos imperdibles de nuestra ciudad</p>
+        </div>
+
+        <section class="seccion-ciudad p-4 rounded mb-5">
+            <div class="d-flex gap-3 justify-content-center mb-4">
+                <a href="#Eventos" class="enlace-datos">Actividades durante el año</a>
+                <a href="#OtrosSitios" class="enlace-datos">Otros sitios para visitar</a>
+            </div>
+       <div class="grilla-lugares-flex">
             <!-- Lugar 1 -->
-            <article>
+            <article class="tarjeta-flex mb-4 p-4 rounded" id="PlayaCafune">
                 <h3>Playa Cafune</h3>
-                <p><strong>Ubicación:</strong>Zona Oeste (a 23 km del centro)</p>
-                <figure> 
-                    <img src="Imagenes/PlayaCafune.jpg" alt="Playa Cafune"  width="400" height="200"> <figcaption><em>Foto del atardecer en Playa Cafune</em></figcaption>
+                <p><strong>Ubicación:</strong> Zona Oeste (a 23 km del centro)</p>
+                <figure class="imagen-principal text-center">
+                    <img src="Imagenes/PlayaCafune.jpg" alt="Playa Cafune" class="img-fluid rounded">
+                    <figcaption>Atardecer en Playa Cafune</figcaption>
                 </figure>
-                <p>Playa Cafune es una playa de arena negra con vista al atardecer muy hermosa </p>
-                <h3>Actividades que puedes realizar:</h3>
+                <p>Playa Cafune es una playa de arena negra con una vista al atardecer realmente impresionante.</p>
+
+                <h4 class="text-info mt-3 fs-5">Actividades que podés realizar:</h4>
                 <ul>
                     <li>Surf</li>
                     <li>Snorkel</li>
-                    <li>Nadar</li>
-                    <li>Y mucho más</li>
+                    <li>Nadar y paseos en kayak</li>
                 </ul>
-                <h3>Deberías de visitar este lugar ya que:</h3>
-                <p>Es el atractivo principal de la ciudad, es el punto turístico más concurrido. De Junio a Septiembre podrás apreciar el atardecer más hermoso del mundo.</p>
             </article>
 
             <!-- Lugar 2 -->
-            <article>
-                <h3>Vólcan Malacara</h3>
-                <p><strong>Ubicación:</strong>Zona Este (a 79 km del centro)</p>
-                <figure> 
-                    <img src="Imagenes/VolcanMalacara.jpg" alt="Volcan Malacara"  width="400" height="200"> <figcaption><em>Foto de la Ruta 7 camino al Vólcan</em></figcaption>
+            <article class="tarjeta-flex mb-4 p-4 rounded" id="VolcanMalacara">
+                <h3>Volcán Malacara</h3>
+                <p><strong>Ubicación:</strong> Zona Este (a 79 km del centro)</p>
+                <figure class="imagen-principal text-center">
+                    <img src="Imagenes/VolcanMalacara.jpg" alt="Volcán Malacara" class="img-fluid rounded">
+                    <figcaption>Camino al Volcán por la Ruta 7</figcaption>
                 </figure>
-                <p>El Vólcan Malacara es un vólcan que esta inactivo hace ya 127 años, es unos de los trekking principales de nuestra ciudad</p>
-                <h3>Actividades que puedes realizar:</h3>
+                <p>Un volcán inactivo hace 127 años que constituye uno de los trekkings principales de la zona.</p>
+
+                <h4 class="text-info mt-3 fs-5">Actividades que podés realizar:</h4>
                 <ul>
                     <li>Senderismo</li>
-                    <li>Astroturísmo</li>
-                    <li>Subir en Teleférico</li>
-                    <li>Y mucho más</li>
+                    <li>Astroturismo</li>
+                    <li>Ascenso en Teleférico</li>
                 </ul>
-                <h3>Deberías de visitar este lugar ya que:</h3>
-                <p>Es un hermoso lugar para aquellas personas en busca de una aventura, podrás realizar distintos circuitos de senderismo con diferentes niveles de dificultad. </p>
             </article>
 
             <!-- Lugar 3 -->
-            <article>
+            <article class="tarjeta-flex mb-4 p-4 rounded" id="VinedoTacoronte">
                 <h3>Viñedo Tacoronte</h3>
-                <p><strong>Ubicación:</strong>Zona Norte (a 53 km del centro)</p>
-                <figure> 
-                    <img src="Imagenes/VinedoTacoronte.jpg" alt="Viñedo Tacoronte"  width="400" height="200"> <figcaption><em>foto del Viñedo más antiguo de la ciudad</em></figcaption>
+                <p><strong>Ubicación:</strong> Zona Norte (a 53 km del centro)</p>
+                <figure class="imagen-principal text-center">
+                    <img src="Imagenes/VinedoTacoronte.jpg" alt="Viñedo Tacoronte" class="img-fluid rounded">
+                    <figcaption>El viñedo más antiguo de la ciudad</figcaption>
                 </figure>
-                <p>El Viñedo Tacoronte es el viñedo más antiguo de la ciudad tiene más de 100 años de historia.  </p>
-                <h3>Actividades que puedes realizar:</h3>
+                <p>Con más de 100 años de historia, ofrece paisajes únicos con vista al Volcán Malacara.</p>
+
+                <h4 class="text-info mt-3 fs-5">Actividades que podés realizar:</h4>
                 <ul>
                     <li>Cata de vinos</li>
-                    <li>Disfrutar del atardecer</li>
                     <li>Picnics al aire libre</li>
-                    <li>Y mucho más</li>
                 </ul>
-                <h3>Deberías de visitar este lugar ya que:</h3>
-                <p>No solo es el viñedo más viejo de la ciudad, sino que también sus viñedos tienen un paisaje muy hermoso con vista al Vólcan Malacara.</p>
+                
             </article>
+           </div>
         </section>
 
-        <section id="Eventos">
-            <h2>Actividades durante el año</h2>
-            <p>Te invitamos a visitar nuestra ciudad en distintas epócas del año ya que contamos con muchos eventos.</p>
+        <!-- Eventos -->
+        <section id="Eventos" class="seccion-ciudad p-4 rounded mb-5">
+            <h2 class="titulo-seccion mb-4">Eventos y Actividades Anuales</h2>
             <ul>
-                    <li>Fiesta de la cosecha</li>
-                    <li>Torneo de Surf</li>
-                    <li>Torneo de Trail Running</li>
-                    <li>Múltiples eventos musicales</li>
-                    <li>y muchos eventos más</li>
+                <li>Fiesta de la Cosecha</li>
+                <li>Torneo de Surf</li>
+                <li>Torneo de Trail Running</li>
+                <li>Múltiples festivales de música al aire libre</li>
             </ul>
         </section>
-            
 
-        
-        <aside id="OtrosSitios">
-                <h3>Otros sitios para visitar</h3>
-                <p>La ciudad cuenta con múltiples atractivos turísticos por eso te hacemos un recuento de ellos</p>
-                <dl>
-                    <dt>Trekkings</dt>
-                    <dd>11 senderos en distintas zonas</dd>
-                    <dt>Vistas panoramicas</dt>
-                    <dd>21 Miradores ubicados en distintas zonas</dd>
-                    <dt>Playas</dt>
-                    <dd>5 Playas ubicadas en la zona oeste</dd>
-                </dl>
+        <!-- Otros sitios -->
+        <aside id="OtrosSitios" class="lista-datos p-4 rounded">
+            <h3 class="text-info mb-3 fs-3">Otros sitios para visitar</h3>
+            <dl class="row m-0">
+                <dt class="col-sm-4">Trekkings</dt>
+                <dd class="col-sm-8">11 senderos en distintas zonas de la ciudad.</dd>
+                <dt class="col-sm-4">Vistas Panorámicas</dt>
+                <dd class="col-sm-8">21 miradores estratégicamente ubicados.</dd>
+                <dt class="col-sm-4">Playas</dt>
+                <dd class="col-sm-8">5 playas principales en la zona oeste.</dd>
+            </dl>
         </aside>
     </main>
-    <footer>
-            <p>&copy; 2026 -<em>Ciudad Gotica - Sitio Oficial de Oficina de Turismo</em></p>
-    </footer>
-</body>
-</html>
 
+    <footer class="pie-pagina text-center py-4">
+        <div class="container">
+            <p class="m-0">© 2026 Ciudad Dadiuc - Sitio Oficial de la Oficina de Turismo.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
