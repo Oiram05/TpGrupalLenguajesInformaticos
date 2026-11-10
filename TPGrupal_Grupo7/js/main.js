@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (theme === "dark") {
             sourceVideo.src = "Imagenes/MuestraNoche.mp4"; // Reemplaza con la ruta de tu video de noche
+            sourceVideo.src = ""
         } else {
             sourceVideo.src = "Imagenes/MuestraDia.mp4"; // Tu video de día original
         }
