@@ -11,6 +11,7 @@
     --color-acento: #6f81b4;
     --color-borde: #777777;
     --color-oscuro: #141414;
+    --color-azulado: #203f94;
     --fuente-principal: 'Oswald', sans-serif;
     --fuente-secundaria: 'Bebas_Neue', sans-serif;
 }
@@ -47,13 +48,14 @@ body {
 /* MODO OSCURO                       */
 /* ================================= */
 [data-btn="dark"] {
-    --color-principal: #202846;
+    --color-principal: #15214d;
     --color-secundario: #2a3656;
     --color-fondo: #07090f;
     --color-texto: #e2e8f0;
-    --color-acento: #435483;
+    --color-acento: #3b4b77;
     --color-borde: #334155;
     --color-oscuro: #05070a;
+    --color-azulado: #122352;
 }
 
 [data-btn="dark"] body {
@@ -346,7 +348,7 @@ body {
 /* ARTICULO CON DATOS            */
 /* ================================= */
 .articulo-contacto{
-    background-color: #16207a;
+    background-color: var(--color-azulado);
     color: rgb(255, 255, 255);
     font-family: 'Bebas_Neue', sans-serif;
     display: flex;

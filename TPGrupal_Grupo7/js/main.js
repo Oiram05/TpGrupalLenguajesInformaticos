@@ -2,7 +2,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const btnModo = document.getElementById('btn-modo');
     const videoFondo = document.getElementById('video-fondo');
     const sourceVideo = document.getElementById('source-video');
+    const videoDescripcion = document.getElementById('video-descripcion');
+    const sourceDescripcion = document.getElementById('source-descripcion');
     
+    //BOTON DE MODO OSCURO CON CAMBIO DE COLOR
     if (!btnModo) return;
 
     const currentTheme = localStorage.getItem('btn');
@@ -20,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // CAMBIAR VIDEO DE BIENVENIDA DE DIA POR EL DE NOCHE
     function actualizarVideo(theme) {
+        //VIDEO DE BIENVENIDA
         if (!sourceVideo || !videoFondo) return;
 
         if (theme === "dark") {
@@ -27,12 +31,28 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             sourceVideo.src = "Imagenes/MuestraDia.mp4"; // Tu video de día original
         }
-        
+
         //recargo el video para que el navegador reproduzca el nuevo archivo
         videoFondo.load();
         videoFondo.play();
     }
 
+    function actualizarVideoDescripcion(theme) {
+                //VIDEO DE DESCRIPCION
+        if(!sourceDescripcion || !videoDescripcion) return;
+
+        if(theme === "dark") {
+            sourceDescripcion.src = "Imagenes/DescripcionNoche.mp4"; // Reemplaza con la ruta de tu video de noche
+        } else {
+            sourceDescripcion.src = "Imagenes/Descripcion.mp4"; // Tu video de día original
+        }
+
+        //recargo el video para que el navegador reproduzca el nuevo archivo
+        videoDescripcion.load();
+        videoDescripcion.play();
+    }
+
+    // Cambiar el tema al hacer clic en el botón
     btnModo.addEventListener('click', () => {
         const currentTheme = document.documentElement.getAttribute("data-btn") || "light";
         const newTheme = currentTheme === "dark" ? "light" : "dark";
@@ -41,5 +61,6 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.setItem("btn", newTheme);
         updateButtonText(newTheme);
         actualizarVideo(newTheme); // Llama a la función al hacer clic
+        actualizarVideoDescripcion(newTheme); // Llama a la función al hacer clic
     });
 });
