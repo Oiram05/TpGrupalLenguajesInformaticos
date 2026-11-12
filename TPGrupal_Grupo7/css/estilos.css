@@ -155,7 +155,7 @@ body {
     position: relative;
     top: -80px;
     left: 0;
-    width: 100vw;
+    width: 100;
     height: 700px;
     overflow: hidden;
     z-index: -1;
@@ -176,9 +176,35 @@ body {
     /*Hace que el bloque ocupe todo el alto de la pantalla.*/
     object-fit: cover;
     /*para que la imagen cubra completamente su contenedor sin deformarse ni estirarse*/
-    z-index: -1;
+    z-index: -1;    
     /*Coloca el texto en una capa superior para que flote bien al frente, visible por encima del video de fondo.*/
 }
+
+/* ================================= */
+/* VIDEO DE DESCRIPCION DE LA CIUDAD */
+/* ================================= */
+
+.video-descripcion {
+    position: relative;
+    top: -80px;
+    left: 0;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.video-descripcion video {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;    
+}
+
+
 
 /* ================================= */
 /* TITULO DE BIENVENIDA              */
@@ -335,7 +361,7 @@ body {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     padding-bottom: 5px;
-}
+    scrollbar-color: var(--color-acento) var(--color-principal);}
 
 .seccion-experiencias img{
     flex-shrink: 0;
@@ -408,6 +434,60 @@ body {
     padding: 0px 30px;
     text-align: center;
 }
+
+
+/* ================================= */
+/* DISEÑO PARA MOVILES DEL INDEX     */ 
+/* ================================= */
+
+@media (max-width: 768px) {
+    /* Achicamos los títulos principales para que entren en celulares */
+    .contenido-cabecera h1 {
+        font-size: 55px !important;
+        line-height: 1.1;
+    }
+
+    .contenido-cabecera h2 {
+        font-size: 35px !important;
+    }
+
+    .contenido-cabecera {
+        top: 35%;
+        transform: translate(-50%, -50%);
+        padding: 0 10px;
+    }
+
+    /* Reducimos la altura del video inicial en celulares para que no sea molesto */
+    .video-inicial {
+        height: 400px;
+    }
+
+    .video-descripcion {
+        width: 100%;
+        height: auto;
+        margin-left: -100px;
+        margin-right: 10px;
+    }
+
+    /* Las imágenes de la galería ocupan casi todo el ancho en el celu */
+    .lugares-galeria {
+        gap: 20px;
+        margin: 20px auto;
+    }
+
+    .lugares-galeria a {
+        width: 90%;
+    }
+}
+
+
+
+
+
+
+
+
+
 /*================================================================================================================================================================*/
 
 /* ================================= */
