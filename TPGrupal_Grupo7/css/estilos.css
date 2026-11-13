@@ -120,9 +120,9 @@ body {
 .logo-daduic {
     width: 40px;
     height: 40px;
-    align-items: left;
-    display:flex;
-    gap:40px;
+    display:inline-block;
+    gap: 40px;
+    left: -100px;
 }
 
 /*BOTON DE MODO OSCURO*/
@@ -350,6 +350,12 @@ body {
     background-color: var(--color-principal);
     border-radius: 10px;
     padding: 20px;
+}
+
+.imagenes-grilla{
+    height: 200px;
+    object-fit: cover;
+
 }
 
 
