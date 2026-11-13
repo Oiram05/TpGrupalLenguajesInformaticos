@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciudad Dadiuc | Inicio</title>
+
+<!-- Bootstrap CSS (CDN vinculado ANTES del CSS propio) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- CSS propio -->
+    <link rel="stylesheet" href="css/estilos.css">
+
+<!-- JavaScript -->
+    <script src="js/main.js"></script>
+
+</head>
+
+<body class="body">
+
+<!-- Header Sticky con Navbar Bootstrap -->
+    <header class="header-ciudad sticky-top">
+        <div class="container text-center py-2">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+                <div class="container-fluid">
+                    <a class="navbar-brand text-uppercase m-0" href="index.html">
+                        <img src="Imagenes/LogoGrupoBlanco.png" alt="Logo de la ciudad Daduic" class="logo-daduic">
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuIndex"
+                        aria-controls="menuIndex" aria-expanded="false" aria-label="Abrir navegación">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse justify-content-end" id="menuIndex">
+                        <ul class="navbar-nav gap-lg-2 me-3">
+                            <li class="nav-item"><a class="nav-link active" aria-current="page"
+                                    href="index.html">Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link" href="ciudad.html">Ciudad</a></li>
+                            <li class="nav-item"><a class="nav-link" href="lugares.html">Lugares</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                            <li class="nav-item"><a class="nav-link" href="registrarse.html">Registro</a></li>
+                            <li class="modo-oscuro" id="btn-modo">🌙</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </nav>
+        </div>
+    </header>
+
+<!-- Bienvenida / Banner con Video -->
+    <main>
+        <div class="contenido-cabecera">
+            <h1>BIENVENIDOS</h1>
+            <br>
+            <h2>A DADUIC</h2>
+        </div>
+
+        <div class="video-inicial" >
+            <video id="video-fondo"autoplay muted loop >
+                <source id="source-video" src="Imagenes/MuestraDia.mp4" type="video/mp4">
+            </video>
+        </div>
+
+
+<!-- Descrpcion de la ciudad -->
+        <div class="video-descripcion">
+            <video id="video-descripcion" autoplay muted loop>
+                <source id="source-descripcion" src="Imagenes/Descripcion.mp4" type="video/mp4">
+            </video>
+        </div>
+
+
+<!-- Galería de Destacados -->
+        <div class="texto-lugares my-5 p-3 rounded text-center">
+            <h3 id="lugares-resumen" class="m-0">RECORRÉ LA CIUDAD</h3>
+        </div>
+
+        <div class="lugares-galeria">
+            <a href="lugares.html#VolcanMalacara">
+                <img src="Imagenes/CiudadDadiuc.jpg" alt="Foto de la ciudad de noche">
+                <p>Capital de Daduica</p>
+            </a>
+            <a href="lugares.html#PlayaCafune">
+                <img src="Imagenes/PlayaCafune.jpg" alt="La Playa Cafune">
+                <p>Playa Cafune</p>
+            </a>
+            <a href="lugares.html#VinedoTacoronte">
+                <img src="Imagenes/VinedoTacoronte.jpg" alt="El Viñedo Tacoronte">
+                <p>Viñedo Tacoronte</p>
+            </a>
+            <a href="lugares.html#VolcanMalacara">
+                <img src="Imagenes/VolcanMalacara.jpg" alt="El Volcan Malacara">
+                <p>Volcán Malacara</p>
+            </a>
+        </div>
+
+<!-- Sección de Experiencias de la ciudad -->
+        <div class="texto-lugares my-5 p-3 rounded text-center">
+            <h3 class="m-0">VIVÍ NUEVAS EXPERIENCIAS</h3>
+        </div>
+
+<!-- Galería de Experiencias (Rutas de imágenes corregidas) -->
+        <section class="cuadro-experiencias p-3 rounded">
+            <div class="seccion-experiencias">
+                <img src="Imagenes/FiestaPlayaCafune.jpg" alt="Fiesta en Playa Cafune" width="500" height="300">
+                <img src="Imagenes/VisitaVolcanMalacara.jpg" alt="Visita Volcan Malacara" width="500" height="300">
+                <img src="Imagenes/RecorridoViñedo.jpg" alt="Recorrido Viñedo" width="500" height="300">
+                <img src="Imagenes/FestivalDaduic.jpg" alt="Festival Daduic" width="500" height="300">
+                <img src="Imagenes/FeriaDaduic.jpg" alt="Feria Daduic" width="500" height="300">
+                <img src="Imagenes/CabalgataDaduic.jpg" alt="Cabalgata Daduic" width="500" height="300">
+            </div>
+        </section> 
+
+
+<!-- Sección de Actividades en la Ciudad (Nueva grilla) -->
+        <section class="nueva-grilla container my-5">
+            <div class="texto-lugares mb-4 p-3 rounded text-center">
+                <h3 class="m-0">ACTIVIDADES DESTACADAS</h3>
+            </div>
+
+            <div class="row g-4">
+
+<!-- Actividad 1 -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0 bg-dark text-white">
+                        <img src="Imagenes/VisitaVolcanMalacara.jpg" class="imagenes-grilla card-img-top" alt="Senderismo">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Senderismo y Aventura</h5>
+                            <p class="card-text flex-grow-1">Explorá los senderos naturales y viví una experiencia única rodeado de paisajes increíbles.</p>
+                            <a href="lugares.html" class="btn btn-outline-light mt-auto">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+
+<!-- Actividad 2 -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0 bg-dark text-white">
+                        <img src="Imagenes/RecorridoViñedo.jpg" class="imagenes-grilla card-img-top" alt="Degustación">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Degustación de Vinos</h5>
+                            <p class="card-text flex-grow-1">Disfrutá de un recorrido guiado por los mejores viñedos locales con catas exclusivas.</p>
+                            <a href="lugares.html" class="btn btn-outline-light mt-auto">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+
+<!-- Actividad 3 -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0 bg-dark text-white">
+                        <img src="Imagenes/FiestaPlayaCafune.jpg" class="imagenes-grilla card-img-top" alt="Deportes acuáticos">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Deportes en la Playa</h5>
+                            <p class="card-text flex-grow-1">Aprovechá la costa con actividades náuticas, eventos y la mejor movida nocturna.</p>
+                            <a href="lugares.html" class="btn btn-outline-light mt-auto">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+<!-- Sección de Contacto -->
+        <article class="articulo-contacto my-5 p-4 text-center rounded">
+            <p class="m-0">
+                ¿Tenés dudas o consultas? Escribinos a través de nuestra sección de
+                <a href="contacto.html" class="text-white text-decoration-underline"><strong>Contacto.</strong></a>
+            </p>
+        </article>
+        </div>
+    </main>
+
+
+<!--Footer con créditos de desarrollo-->
+    <footer class="pie-pagina text-center py-4">
+        <div class="container">
+            <strong>Desarrollado por:</strong> Alex Santino Gaitán Gutiérrez, Alvarez Mario Gabriel, Agustín Antonio
+            Abregú, Lisandro Gimenez Frez.
+        </div>
+    </footer>
+
+<!-- Bootstrap JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
