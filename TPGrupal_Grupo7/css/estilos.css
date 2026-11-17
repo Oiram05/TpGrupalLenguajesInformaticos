@@ -412,13 +412,14 @@ body {
         top: 90%; /* Justo debajo de la barra de navegación */
         left: 0;
         width: 100%;
-        padding: 15px;
-        border-bottom-left-radius: 30px;
-        border-bottom-right-radius: 30px;
-        background-color: rgba(44, 58, 95, 0.7);
+        padding: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.3);
         box-shadow: 10px 10px 10px 1000px rgba(0, 0, 0, 0.3);
         z-index: 1;
         
+        /*boton modo oscuro sumado al nav (estaba aparte)*/
         .modo-oscuro{
         position: absolute;
         top: 100%; /* Justo debajo de la barra de navegación */
@@ -436,7 +437,6 @@ body {
         }
         
     }
-
 
     /* Reducimos la altura del video inicial y descripcion en celulares para que no sea molesto */
     .video-inicial {
