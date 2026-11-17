@@ -43,8 +43,6 @@ body {
 
 }
 
-
-
 /* ================================= */
 /* MODO OSCURO                       */
 /* ================================= */
@@ -70,51 +68,8 @@ body {
 
 
 /* ============================================================*/
-/* PESTAÑAS DE NAVEGACION ENTRES LAS SECCIONES DE LA PAGINA    */
+/* PESTAÑAS DE NAVEGACION                                      */
 /* ============================================================*/
-
-/* Acomodar las pestañas de navegación en la parte superior izquierda del index*/
-.header-superior {
-    font-family: 'Bebas_Neue', sans-serif;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 30px;
-}
-
-.menu-pestañas {
-    list-style-type: none;
-    margin: -10px;
-    padding: 20px;
-    display: flex;
-    gap: 30px; 
-/*Texto dentro de las pestañas*/
-    font-size: 20px;
-    background-color: var(--color-principal);
-    color: var(--color-texto);
-    padding: 8px 20px;
-    text-decoration: none;
-    border-radius: 100px;
-    font-weight: bold;
-    z-index: 4;
-}
-
-.menu-pestañas li a {
-    text-decoration: none;
-    font-weight: bold;
-    width: 100%;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 100px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    color: var(--color-texto);
-}
-
-.menu-pestañas li a:hover {
-    transform: scale(0.95);
-    box-shadow: 0px 0px 8px var(--color-acento);
-    
-}
 
 /*LOGO DEL GRUPO*/
 .logo-daduic {
@@ -430,9 +385,10 @@ body {
 
 /* ================================= */
 /* DISEÑO PARA MOVILES DEL INDEX     */ 
-/* ================================= */
+/* ================================= --------------------------------------------------------------------------------------------*/
 
 @media (max-width: 768px) {
+    
     /* Achicamos los títulos principales para que entren en celulares */
     .contenido-cabecera h1 {
         font-size: 80px !important;
@@ -440,29 +396,64 @@ body {
     }
 
     .contenido-cabecera h2 {
-        font-size: 50px !important;
+        font-size: 28px !important;
     }
 
     .contenido-cabecera {
         top: 27%;
         transform: translate(-50%, -50%);
         padding: 0 10px;
+        width: 90%;
     }
+
+    /* Hacemos que el menú desplegable este por encima del contenido y dentro agrego el boton del modo oscuro */
+    .navbar-collapse {
+        position: absolute;
+        top: 90%; /* Justo debajo de la barra de navegación */
+        left: 0;
+        width: 100%;
+        padding: 15px;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        background-color: rgba(44, 58, 95, 0.7);
+        box-shadow: 10px 10px 10px 1000px rgba(0, 0, 0, 0.3);
+        z-index: 1;
+        
+        .modo-oscuro{
+        position: absolute;
+        top: 100%; /* Justo debajo de la barra de navegación */
+        left: 45%;
+        width: 13%;
+        padding: 10px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+        z-index: 1000;  
+        }
+        .modo-oscuro:hover {
+        background-color: var(--color-borde);
+        color: var(--color-oscuro);
+        transform: scale(1.05);
+        box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+        }
+        
+    }
+
 
     /* Reducimos la altura del video inicial y descripcion en celulares para que no sea molesto */
     .video-inicial {
+        position: relative;
         height: 400px;
-        width: auto;
-        margin-top: 0%;
+        width: 100% !important; 
+        max-height: 400px;
+        overflow: hidden;
+        margin-top: 0;
     }
 
     .video-descripcion {
         position: relative;
-        top: 10px;
-        right: 100px;
-        width: 125%;
+        margin-top: 1%;
+        width: 100% !important;
+        max-width: 100%;
         height: 100%;
-        overflow:visible;
         object-fit: cover;
         z-index: 3;
     }
@@ -489,9 +480,7 @@ body {
         font-size: 15px;
     }
 
-
 }
-
 
 /*================================================================================================================================================================*/
 
