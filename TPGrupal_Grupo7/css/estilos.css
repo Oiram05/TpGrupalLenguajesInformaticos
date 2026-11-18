@@ -698,6 +698,10 @@ dd {
 [data-btn="dark"] .formulario-contacto textarea,
 [data-btn="dark"] .lista-datos {
     background-color: var(--color-fondo);
+} 
+
+[data-btn="dark"] .tabla-horarios tbody tr:nth-child(even) {
+    background-color: var(--color-secundario);
 }
 
 /*========================================================================================================================*/
