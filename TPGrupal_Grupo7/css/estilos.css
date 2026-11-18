@@ -450,13 +450,17 @@ body {
     }
 
     .video-descripcion {
-        position: relative;
+        display: inline-block;
+        position:relative;
         margin-top: 1%;
-        width: 100% !important;
-        max-width: 100%;
+        width: 120% !important;
         height: 100%;
+        right: 10%;
         object-fit: cover;
         z-index: 3;
+        overflow-y: hidden;
+        overflow-x: auto;
+        white-space: nowrap;
     }
 
     /* Las imágenes de la galería ocupan casi todo el ancho en el celu */
