@@ -677,6 +677,27 @@ dd {
     color: rgb(255, 255, 255);
     text-align: center;
     margin-bottom: 10px;
+} 
+
+/* Modo oscuro para contacto.html y registrarse.html*/
+[data-btn="dark"] .seccion-ciudad {
+    background-color: var(--color-principal);
+}
+
+[data-btn="dark"] .titulo-seccion {
+    background-color: var(--color-secundario);
+}
+
+[data-btn="dark"] .tabla-horarios,
+[data-btn="dark"] .formulario-contacto {
+    background-color: var(--color-secundario);
+}
+
+[data-btn="dark"] .tabla-horarios th,
+[data-btn="dark"] .formulario-contacto input,
+[data-btn="dark"] .formulario-contacto textarea,
+[data-btn="dark"] .lista-datos {
+    background-color: var(--color-fondo);
 }
 
 /*========================================================================================================================*/
